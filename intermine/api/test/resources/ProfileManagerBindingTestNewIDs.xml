@@ -1,0 +1,60 @@
+<userprofiles>
+  <userprofile username="Unmarshall-1" password="1234"
+    apikey="unmarshall-1">
+    <bags>
+      <bag name="bag1" type="Department">
+        <bagValue value="DepartmentA1" />
+        <bagValue value="DepartmentB1" />
+      </bag>
+    </bags>
+    <queries>
+      <!-- this is intentionally not a save-query element in order to test the
+        backwards compatibility of the unmarshalling of saved queries -->
+      <query name="query1" model="testmodel" view="">
+      </query>
+    </queries>
+    <template-queries>
+      <template name="template" description="tdesc" important="false">
+        <query name="template" model="testmodel" view="">
+        </query>
+      </template>
+    </template-queries>
+    <tags>
+      <tag name="test-tag" objectIdentifier="Department.company" type="reference" />
+      <tag name="test-tag2" objectIdentifier="Department.name" type="attribute" />
+      <tag name="test-tag2" objectIdentifier="Department.company" type="reference" />
+      <tag name="test-tag2" objectIdentifier="Department.employees"
+        type="collection" />
+    </tags>
+  </userprofile>
+  <userprofile username="Unmarshall-2" password="qwerty" apikey="token2">
+    <bags>
+      <bag name="stored_2_1" type="Department">
+        <bagValue value="DepartmentA1" />
+      </bag>
+      <bag name="stored_2_2" type="Company">
+        <bagValue value="CompanyA" />
+      </bag>
+      <bag name="stored_2_3" type="Employee">
+        <bagValue value="EmployeeA3" />
+        <bagValue value="EmployeeB2" />
+      </bag>
+    </bags>
+    <queries>
+      <saved-query name="query1">
+        <query name="query1" model="testmodel" view="">
+        </query>
+      </saved-query>
+    </queries>
+    <template-queries>
+      <template name="template" description="some desc" important="true">
+        <query name="template" model="testmodel" view="">
+        </query>
+      </template>
+    </template-queries>
+    <tags>
+      <tag name="test-tag" objectIdentifier="Department.company" type="reference" />
+    </tags>
+  </userprofile>
+</userprofiles>
+
