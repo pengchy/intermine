@@ -1,0 +1,760 @@
+Buildfile: /home/pengchy/soft/intermine/testmodel/dbmodel/build.xml
+
+-pre-clean:
+
+-init-project:
+
+-pre-pre-init:
+
+library.-pre-init:
+
+model.-pre-init:
+
+-pre-init:
+
+clean:
+   [delete] Deleting directory /home/pengchy/soft/intermine/testmodel/dbmodel/build
+
+-init-project:
+
+-check-for-intermine-properties-file:
+
+-set-release-suffix-not-exists:
+
+-set-release-suffix-exists:
+
+-set-release-suffix:
+
+-pre-pre-init:
+
+library.-pre-init:
+
+model.-pre-init:
+    [mkdir] Created dir: /home/pengchy/soft/intermine/testmodel/dbmodel/build/model
+
+-pre-init:
+    [mkdir] Created dir: /home/pengchy/soft/intermine/testmodel/dbmodel/build/classes
+
+-pre-define-task-classpath:
+    [mkdir] Created dir: /home/pengchy/soft/intermine/testmodel/dbmodel/build/main
+    [mkdir] Created dir: /home/pengchy/soft/intermine/testmodel/dbmodel/build/tmp
+     [copy] Copying 1 file to /home/pengchy/soft/intermine/testmodel/dbmodel/build/main
+
+-init-check-for-intermine-properties-dir:
+
+-check-for-intermine-properties-dir:
+
+-init-check-for-intermine-properties:
+
+-check-for-intermine-properties:
+
+-init-properties:
+     [copy] Copying 1 file to /home/pengchy/soft/intermine/testmodel/dbmodel/build/main
+     [copy] Copying 1 file to /home/pengchy/soft/intermine/testmodel/dbmodel/build/main
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+[dependencies] ---- Dependency build order:-----------------------
+[dependencies]  intermine/model/main
+[dependencies]  intermine/objectstore/main
+[dependencies]  intermine/integrate/model/fulldata
+[dependencies]  intermine/integrate/main
+[dependencies]  intermine/objectstore/model/testmodel
+[dependencies]  intermine/model/test
+[dependencies]  intermine/objectstore/test
+[dependencies]  intermine/integrate/test
+[dependencies] ---------------------------------------------------
+[dependencies] Sun Apr 01 09:54:19 CST 2018
+[dependencies] Executing "jar" for source "intermine/model/main"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/model/main
+
+-init-project:
+
+-pre-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+-init-generate:
+
+-pre-generate:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+[dependencies] Sun Apr 01 09:54:19 CST 2018
+[dependencies] Executing "jar" for source "intermine/objectstore/main"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/objectstore/main
+
+-init-project:
+
+-pre-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+-init-generate:
+
+-pre-generate:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+[dependencies] Sun Apr 01 09:54:19 CST 2018
+[dependencies] Executing "jar" for source "intermine/integrate/model/fulldata"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/integrate/model/fulldata
+
+-init-project:
+
+-pre-pre-init:
+
+library.-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+library.-init-generate:
+
+-pre-define-task-classpath:
+   [delete] Deleting directory /home/pengchy/soft/intermine/intermine/integrate/model/fulldata/build/tmp
+    [mkdir] Created dir: /home/pengchy/soft/intermine/intermine/integrate/model/fulldata/build/tmp
+
+-define-task-classpath:
+
+-check-task-availability:
+
+-load-os-tasks:
+     [echo] Loading objectstore tasks
+
+-load-int-tasks:
+
+-load-web-tasks:
+
+-load-task-taskdefs:
+
+-init-macrodef-build-db:
+
+-init-task-xml:
+
+-init-model-out-of-date:
+
+-init-generate:
+
+-pre-generate:
+
+build-model-from-xml-in-build-dir:
+
+build-model-from-xml-in-project-dir:
+     [echo] Found model file fulldata_model.xml in project directory /home/pengchy/soft/intermine/imbuild/../intermine/integrate/model/fulldata
+
+-generate-model-java-message:
+     [echo] generated model java is up to date - not regenerating
+
+-init-macrodef-model-output:
+
+generate-model-java:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+[dependencies] Sun Apr 01 09:54:20 CST 2018
+[dependencies] Executing "jar" for source "intermine/integrate/main"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/integrate/main
+
+-init-project:
+
+-pre-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+-init-generate:
+
+-pre-generate:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+[dependencies] Sun Apr 01 09:54:20 CST 2018
+[dependencies] Executing "jar" for source "intermine/objectstore/model/testmodel"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/objectstore/model/testmodel
+
+-init-project:
+
+-pre-pre-init:
+
+library.-pre-init:
+
+-pre-init:
+    [mkdir] Created dir: /home/pengchy/soft/intermine/intermine/objectstore/model/testmodel/build/model
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+    [mkdir] Created dir: /home/pengchy/soft/intermine/intermine/objectstore/model/testmodel/build/classes
+
+library.-init-generate:
+    [mkdir] Created dir: /home/pengchy/soft/intermine/intermine/objectstore/model/testmodel/build/gen/src
+
+-pre-define-task-classpath:
+    [mkdir] Created dir: /home/pengchy/soft/intermine/intermine/objectstore/model/testmodel/build/main
+    [mkdir] Created dir: /home/pengchy/soft/intermine/intermine/objectstore/model/testmodel/build/tmp
+     [copy] Copying 1 file to /home/pengchy/soft/intermine/intermine/objectstore/model/testmodel/build/main
+
+-define-task-classpath:
+
+-check-task-availability:
+
+-load-os-tasks:
+     [echo] Loading objectstore tasks
+
+-load-int-tasks:
+
+-load-web-tasks:
+
+-load-task-taskdefs:
+
+-init-macrodef-build-db:
+
+-init-task-xml:
+
+-init-model-out-of-date:
+
+-init-generate:
+
+-pre-generate:
+
+build-model-from-xml-in-build-dir:
+
+build-model-from-xml-in-project-dir:
+     [echo] Found model file testmodel_model.xml in project directory /home/pengchy/soft/intermine/imbuild/../intermine/objectstore/model/testmodel
+     [copy] Copying 1 file to /home/pengchy/soft/intermine/intermine/objectstore/model/testmodel/build/main
+
+-generate-model-java-message:
+
+-init-macrodef-model-output:
+
+generate-model-java:
+     [echo] Generating model java code for testmodel model to /home/pengchy/soft/intermine/intermine/objectstore/model/testmodel/build/gen/src
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+    [javac] Compiling 28 source files to /home/pengchy/soft/intermine/intermine/objectstore/model/testmodel/build/classes
+[dependencies] warning: [options] bootstrap class path not set in conjunction with -source 1.6
+[dependencies] Note: Some input files use unchecked or unsafe operations.
+[dependencies] Note: Recompile with -Xlint:unchecked for details.
+[dependencies] 1 warning
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+    [mkdir] Created dir: /home/pengchy/soft/intermine/intermine/objectstore/model/testmodel/dist
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+  [lib:jar] Building jar: /home/pengchy/soft/intermine/intermine/objectstore/model/testmodel/dist/testmodel.jar
+
+-post-jar:
+
+jar:
+[dependencies] Sun Apr 01 09:54:22 CST 2018
+[dependencies] Executing "jar" for source "intermine/model/test"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/model/test
+
+-init-project:
+
+-pre-pre-init:
+
+library.-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+    [mkdir] Created dir: /home/pengchy/soft/intermine/intermine/model/test/build/classes
+
+-init-generate:
+
+-pre-generate:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+    [javac] Compiling 12 source files to /home/pengchy/soft/intermine/intermine/model/test/build/classes
+[dependencies] warning: [options] bootstrap class path not set in conjunction with -source 1.6
+[dependencies] 1 warning
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+    [mkdir] Created dir: /home/pengchy/soft/intermine/intermine/model/test/dist
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+  [lib:jar] Building jar: /home/pengchy/soft/intermine/intermine/model/test/dist/intermine-model-test.jar
+
+-post-jar:
+
+jar:
+[dependencies] Sun Apr 01 09:54:22 CST 2018
+[dependencies] Executing "jar" for source "intermine/objectstore/test"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/objectstore/test
+
+-init-project:
+
+-pre-pre-init:
+
+library.-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+    [mkdir] Created dir: /home/pengchy/soft/intermine/intermine/objectstore/test/build/classes
+
+-init-generate:
+
+-pre-generate:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+    [javac] Compiling 132 source files to /home/pengchy/soft/intermine/intermine/objectstore/test/build/classes
+[dependencies] warning: [options] bootstrap class path not set in conjunction with -source 1.6
+[dependencies] Note: Some input files use unchecked or unsafe operations.
+[dependencies] Note: Recompile with -Xlint:unchecked for details.
+[dependencies] 1 warning
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+    [mkdir] Created dir: /home/pengchy/soft/intermine/intermine/objectstore/test/dist
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+  [lib:jar] Building jar: /home/pengchy/soft/intermine/intermine/objectstore/test/dist/intermine-objectstore-test.jar
+
+-post-jar:
+
+jar:
+[dependencies] Sun Apr 01 09:54:25 CST 2018
+[dependencies] Executing "jar" for source "intermine/integrate/test"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/integrate/test
+
+-init-project:
+
+-pre-pre-init:
+
+library.-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+    [mkdir] Created dir: /home/pengchy/soft/intermine/intermine/integrate/test/build/classes
+
+-init-generate:
+
+-pre-generate:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+    [javac] Compiling 22 source files to /home/pengchy/soft/intermine/intermine/integrate/test/build/classes
+[dependencies] warning: [options] bootstrap class path not set in conjunction with -source 1.6
+[dependencies] /home/pengchy/soft/intermine/intermine/integrate/test/src/org/intermine/xml/full/ItemTest.java:74: warning: '_' used as an identifier
+[dependencies]         } catch (RuntimeException _) {
+[dependencies]                                   ^
+[dependencies]   (use of '_' as an identifier might not be supported in releases after Java SE 8)
+[dependencies] /home/pengchy/soft/intermine/intermine/integrate/test/src/org/intermine/xml/full/ItemTest.java:83: warning: '_' used as an identifier
+[dependencies]         } catch (RuntimeException _) {
+[dependencies]                                   ^
+[dependencies]   (use of '_' as an identifier might not be supported in releases after Java SE 8)
+[dependencies] /home/pengchy/soft/intermine/intermine/integrate/test/src/org/intermine/xml/full/ItemTest.java:93: warning: '_' used as an identifier
+[dependencies]         } catch (RuntimeException _) {
+[dependencies]                                   ^
+[dependencies]   (use of '_' as an identifier might not be supported in releases after Java SE 8)
+[dependencies] /home/pengchy/soft/intermine/intermine/integrate/test/src/org/intermine/xml/full/ItemTest.java:108: warning: '_' used as an identifier
+[dependencies]         } catch (RuntimeException _) {
+[dependencies]                                   ^
+[dependencies]   (use of '_' as an identifier might not be supported in releases after Java SE 8)
+[dependencies] /home/pengchy/soft/intermine/intermine/integrate/test/src/org/intermine/xml/full/ItemTest.java:128: warning: '_' used as an identifier
+[dependencies]         } catch (RuntimeException _) {
+[dependencies]                                   ^
+[dependencies]   (use of '_' as an identifier might not be supported in releases after Java SE 8)
+[dependencies] /home/pengchy/soft/intermine/intermine/integrate/test/src/org/intermine/xml/full/ItemTest.java:135: warning: '_' used as an identifier
+[dependencies]         } catch (RuntimeException _) {
+[dependencies]                                   ^
+[dependencies]   (use of '_' as an identifier might not be supported in releases after Java SE 8)
+[dependencies] /home/pengchy/soft/intermine/intermine/integrate/test/src/org/intermine/xml/full/ItemTest.java:142: warning: '_' used as an identifier
+[dependencies]         } catch (RuntimeException _) {
+[dependencies]                                   ^
+[dependencies]   (use of '_' as an identifier might not be supported in releases after Java SE 8)
+[dependencies] /home/pengchy/soft/intermine/intermine/integrate/test/src/org/intermine/xml/full/ItemTest.java:156: warning: '_' used as an identifier
+[dependencies]         } catch (RuntimeException _) {
+[dependencies]                                   ^
+[dependencies]   (use of '_' as an identifier might not be supported in releases after Java SE 8)
+[dependencies] /home/pengchy/soft/intermine/intermine/integrate/test/src/org/intermine/xml/full/ItemTest.java:163: warning: '_' used as an identifier
+[dependencies]         } catch (RuntimeException _) {
+[dependencies]                                   ^
+[dependencies]   (use of '_' as an identifier might not be supported in releases after Java SE 8)
+[dependencies] /home/pengchy/soft/intermine/intermine/integrate/test/src/org/intermine/xml/full/ItemTest.java:174: warning: '_' used as an identifier
+[dependencies]         } catch (RuntimeException _) {
+[dependencies]                                   ^
+[dependencies]   (use of '_' as an identifier might not be supported in releases after Java SE 8)
+[dependencies] /home/pengchy/soft/intermine/intermine/integrate/test/src/org/intermine/xml/full/ItemTest.java:204: warning: '_' used as an identifier
+[dependencies]         } catch (RuntimeException _) {
+[dependencies]                                   ^
+[dependencies]   (use of '_' as an identifier might not be supported in releases after Java SE 8)
+[dependencies] /home/pengchy/soft/intermine/intermine/integrate/test/src/org/intermine/xml/full/ItemTest.java:215: warning: '_' used as an identifier
+[dependencies]         } catch (RuntimeException _) {
+[dependencies]                                   ^
+[dependencies]   (use of '_' as an identifier might not be supported in releases after Java SE 8)
+[dependencies] /home/pengchy/soft/intermine/intermine/integrate/test/src/org/intermine/xml/full/ItemTest.java:257: warning: '_' used as an identifier
+[dependencies]         } catch (RuntimeException _) {
+[dependencies]                                   ^
+[dependencies]   (use of '_' as an identifier might not be supported in releases after Java SE 8)
+[dependencies] /home/pengchy/soft/intermine/intermine/integrate/test/src/org/intermine/xml/full/ItemTest.java:292: warning: '_' used as an identifier
+[dependencies]         } catch (RuntimeException _) {
+[dependencies]                                   ^
+[dependencies]   (use of '_' as an identifier might not be supported in releases after Java SE 8)
+[dependencies] /home/pengchy/soft/intermine/intermine/integrate/test/src/org/intermine/xml/full/ItemTest.java:312: warning: '_' used as an identifier
+[dependencies]         } catch (RuntimeException _) {
+[dependencies]                                   ^
+[dependencies]   (use of '_' as an identifier might not be supported in releases after Java SE 8)
+[dependencies] Note: Some input files use unchecked or unsafe operations.
+[dependencies] Note: Recompile with -Xlint:unchecked for details.
+[dependencies] 16 warnings
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+    [mkdir] Created dir: /home/pengchy/soft/intermine/intermine/integrate/test/dist
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+  [lib:jar] Building jar: /home/pengchy/soft/intermine/intermine/integrate/test/dist/intermine-integrate-test.jar
+
+-post-jar:
+
+jar:
+
+-define-task-classpath:
+
+-check-task-availability:
+
+-load-os-tasks:
+     [echo] Loading objectstore tasks
+
+-load-int-tasks:
+     [echo] Loading integration tasks
+
+-load-web-tasks:
+
+-load-task-taskdefs:
+
+-init-macrodef-build-db:
+
+-init-task-xml:
+
+-init-build-db:
+
+-define-macrodef-merge-additions:
+
+-pre-init-merge:
+
+-init-merge:
+
+-init-extra-models-start:
+
+-init-extra-models-end:
+
+-merge-models:
+
+-init-compile:
+
+library.-init-generate:
+    [mkdir] Created dir: /home/pengchy/soft/intermine/testmodel/dbmodel/build/gen/src
+
+-init-model-out-of-date:
+
+model.-init-generate:
+
+-init-generate:
+
+-pre-generate-retrieve:
+
+-pre-generate-properties:
+
+-pre-generate:
+
+build-model-from-xml-in-build-dir:
+
+build-model-from-xml-in-project-dir:
+
+-generate-model-java-message:
+     [echo] generated model java is up to date - not regenerating
+
+-init-macrodef-model-output:
+
+generate-model-java:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-pre-build-db:
+
+-do-build-db:
+ [build-db] [main] INFO com.zaxxer.hikari.HikariDataSource - HikariCP pool db.unittest is starting.
+ [build-db] Our new url -> jdbc:postgresql://localhost/unittest
+ [build-db] Our new url -> jdbc:postgresql://localhost/unittest
+[create-indexes] [main] INFO com.zaxxer.hikari.HikariDataSource - HikariCP pool db.unittest is starting.
+
+-post-build-db:
+
+build-db:
+
+BUILD SUCCESSFUL
+Total time: 13 seconds
+[Thread-1] INFO com.zaxxer.hikari.pool.HikariPool - HikariCP pool db.unittest is shutting down.
+[Thread-3] INFO com.zaxxer.hikari.pool.HikariPool - HikariCP pool db.unittest is shutting down.

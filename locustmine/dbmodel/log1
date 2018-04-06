@@ -1,0 +1,735 @@
+Buildfile: /home/pengchy/soft/intermine/locustmine/dbmodel/build.xml
+
+-pre-clean:
+
+-init-project:
+
+-pre-pre-init:
+
+library.-pre-init:
+
+model.-pre-init:
+    [mkdir] Created dir: /home/pengchy/soft/intermine/locustmine/dbmodel/build/model
+
+-pre-init:
+    [mkdir] Created dir: /home/pengchy/soft/intermine/locustmine/dbmodel/build/classes
+
+clean:
+   [delete] Deleting directory /home/pengchy/soft/intermine/locustmine/dbmodel/build
+
+-init-project:
+
+-check-for-intermine-properties-file:
+
+-set-release-suffix-not-exists:
+
+-set-release-suffix-exists:
+
+-set-release-suffix:
+
+-pre-pre-init:
+
+library.-pre-init:
+
+model.-pre-init:
+    [mkdir] Created dir: /home/pengchy/soft/intermine/locustmine/dbmodel/build/model
+
+-pre-init:
+    [mkdir] Created dir: /home/pengchy/soft/intermine/locustmine/dbmodel/build/classes
+
+-pre-define-task-classpath:
+    [mkdir] Created dir: /home/pengchy/soft/intermine/locustmine/dbmodel/build/main
+    [mkdir] Created dir: /home/pengchy/soft/intermine/locustmine/dbmodel/build/tmp
+     [copy] Copying 1 file to /home/pengchy/soft/intermine/locustmine/dbmodel/build/main
+
+-init-check-for-intermine-properties-dir:
+
+-check-for-intermine-properties-dir:
+
+-init-check-for-intermine-properties:
+
+-check-for-intermine-properties:
+
+-init-properties:
+     [copy] Copying 1 file to /home/pengchy/soft/intermine/locustmine/dbmodel/build/main
+     [copy] Copying 1 file to /home/pengchy/soft/intermine/locustmine/dbmodel/build/main
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+[dependencies] ---- Dependency build order:-----------------------
+[dependencies]  intermine/model/main
+[dependencies]  intermine/objectstore/main
+[dependencies]  intermine/integrate/model/fulldata
+[dependencies]  intermine/integrate/main
+[dependencies]  intermine/api/model/userprofile
+[dependencies]  intermine/pathquery/main
+[dependencies]  intermine/api/main
+[dependencies]  bio/core/main
+[dependencies] ---------------------------------------------------
+[dependencies] Thu Mar 29 16:47:11 CST 2018
+[dependencies] Executing "jar" for source "intermine/model/main"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/model/main
+
+-init-project:
+
+-pre-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+-init-generate:
+
+-pre-generate:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+[dependencies] Thu Mar 29 16:47:11 CST 2018
+[dependencies] Executing "jar" for source "intermine/objectstore/main"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/objectstore/main
+
+-init-project:
+
+-pre-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+-init-generate:
+
+-pre-generate:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+[dependencies] Thu Mar 29 16:47:12 CST 2018
+[dependencies] Executing "jar" for source "intermine/integrate/model/fulldata"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/integrate/model/fulldata
+
+-init-project:
+
+-pre-pre-init:
+
+library.-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+library.-init-generate:
+
+-pre-define-task-classpath:
+   [delete] Deleting directory /home/pengchy/soft/intermine/intermine/integrate/model/fulldata/build/tmp
+    [mkdir] Created dir: /home/pengchy/soft/intermine/intermine/integrate/model/fulldata/build/tmp
+
+-define-task-classpath:
+
+-check-task-availability:
+
+-load-os-tasks:
+     [echo] Loading objectstore tasks
+
+-load-int-tasks:
+
+-load-web-tasks:
+
+-load-task-taskdefs:
+
+-init-macrodef-build-db:
+
+-init-task-xml:
+
+-init-model-out-of-date:
+
+-init-generate:
+
+-pre-generate:
+
+build-model-from-xml-in-build-dir:
+
+build-model-from-xml-in-project-dir:
+     [echo] Found model file fulldata_model.xml in project directory /home/pengchy/soft/intermine/imbuild/../intermine/integrate/model/fulldata
+
+-generate-model-java-message:
+     [echo] generated model java is up to date - not regenerating
+
+-init-macrodef-model-output:
+
+generate-model-java:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+[dependencies] Thu Mar 29 16:47:12 CST 2018
+[dependencies] Executing "jar" for source "intermine/integrate/main"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/integrate/main
+
+-init-project:
+
+-pre-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+-init-generate:
+
+-pre-generate:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+[dependencies] Thu Mar 29 16:47:12 CST 2018
+[dependencies] Executing "jar" for source "intermine/api/model/userprofile"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/api/model/userprofile
+
+-init-project:
+
+-pre-pre-init:
+
+library.-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+library.-init-generate:
+
+-pre-define-task-classpath:
+   [delete] Deleting directory /home/pengchy/soft/intermine/intermine/api/model/userprofile/build/tmp
+    [mkdir] Created dir: /home/pengchy/soft/intermine/intermine/api/model/userprofile/build/tmp
+
+-define-task-classpath:
+
+-check-task-availability:
+
+-load-os-tasks:
+     [echo] Loading objectstore tasks
+
+-load-int-tasks:
+
+-load-web-tasks:
+
+-load-task-taskdefs:
+
+-init-macrodef-build-db:
+
+-init-task-xml:
+
+-init-model-out-of-date:
+
+-init-generate:
+
+-pre-generate:
+
+build-model-from-xml-in-build-dir:
+
+build-model-from-xml-in-project-dir:
+     [echo] Found model file userprofile_model.xml in project directory /home/pengchy/soft/intermine/imbuild/../intermine/api/model/userprofile
+
+-generate-model-java-message:
+     [echo] generated model java is up to date - not regenerating
+
+-init-macrodef-model-output:
+
+generate-model-java:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+[dependencies] Thu Mar 29 16:47:13 CST 2018
+[dependencies] Executing "jar" for source "intermine/pathquery/main"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/pathquery/main
+
+-init-project:
+
+-pre-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+-init-generate:
+
+-pre-generate:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+[dependencies] Thu Mar 29 16:47:13 CST 2018
+[dependencies] Executing "jar" for source "intermine/api/main"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/api/main
+
+-init-project:
+
+-pre-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+-init-generate:
+
+-pre-generate:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+[dependencies] Thu Mar 29 16:47:13 CST 2018
+[dependencies] Executing "jar" for source "bio/core/main"  in directory: /home/pengchy/soft/intermine/imbuild/../bio/core/main
+
+-init-project:
+
+-pre-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+-init-generate:
+
+-pre-generate:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+
+-define-task-classpath:
+
+-check-task-availability:
+
+-load-os-tasks:
+     [echo] Loading objectstore tasks
+
+-load-int-tasks:
+     [echo] Loading integration tasks
+
+-load-web-tasks:
+
+-load-task-taskdefs:
+
+-init-macrodef-build-db:
+
+-init-task-xml:
+
+-init-build-db:
+
+-define-macrodef-merge-additions:
+
+create-so-model:
+ [so-model] Total terms: 1935
+ [so-model] Total terms, post-pruning: 85
+ [so-model] Total terms, post-flattening: 47
+ [so-model] Wrote /home/pengchy/soft/intermine/locustmine/dbmodel/build/model/so_additions.xml
+
+-pre-init-merge:
+
+-init-merge:
+     [copy] Copying 1 file to /home/pengchy/soft/intermine/locustmine/dbmodel/build/model
+
+-init-extra-models-start:
+
+-init-extra-models-end:
+
+-merge-models:
+[merge-source-models] warning: /home/pengchy/soft/intermine/bio/sources/update-publications/update-publications_additions.xml not found
+[merge-source-models] warning: /home/pengchy/soft/intermine/bio/sources/entrez-organism/entrez-organism_additions.xml not found
+[merge-source-models] merging model additions from: /home/pengchy/soft/intermine/locustmine/dbmodel/build/model/so_additions.xml
+[merge-source-models] merging model additions from: /home/pengchy/soft/intermine/bio/core/genomic_additions.xml
+[merge-source-models] merging model additions from: /home/pengchy/soft/intermine/bio/sources/fasta/fasta_additions.xml
+[merge-source-models] merging model additions from: /home/pengchy/soft/intermine/bio/sources/gff/gff_additions.xml
+[merge-source-models] merging model additions from: /home/pengchy/soft/intermine/bio/sources/uniprot/uniprot_additions.xml
+[merge-source-models] merging model additions from: /home/pengchy/soft/intermine/bio/sources/go/go_additions.xml
+[merge-source-models] merging model additions from: /home/pengchy/soft/intermine/bio/sources/go-annotation/go-annotation_additions.xml
+[merge-source-models] merging model additions from: /home/pengchy/soft/intermine/bio/sources/kegg-pathway/kegg-pathway_additions.xml
+[merge-source-models] merging model additions from: /home/pengchy/soft/intermine/bio/sources/interpro/interpro_additions.xml
+
+-init-compile:
+
+library.-init-generate:
+    [mkdir] Created dir: /home/pengchy/soft/intermine/locustmine/dbmodel/build/gen/src
+
+-init-model-out-of-date:
+
+model.-init-generate:
+
+-init-generate:
+
+-pre-generate-retrieve:
+
+-pre-generate-properties:
+
+-pre-generate:
+
+build-model-from-xml-in-build-dir:
+     [echo] Found model file genomic_model.xml in build directory /home/pengchy/soft/intermine/locustmine/dbmodel/build
+     [copy] Copying 1 file to /home/pengchy/soft/intermine/locustmine/dbmodel/build/main
+
+build-model-from-xml-in-project-dir:
+
+-generate-model-java-message:
+
+-init-macrodef-model-output:
+
+generate-model-java:
+     [echo] Generating model java code for genomic model to /home/pengchy/soft/intermine/locustmine/dbmodel/build/gen/src
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+    [javac] Compiling 154 source files to /home/pengchy/soft/intermine/locustmine/dbmodel/build/classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 1.6
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 1 warning
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-pre-build-db:
+     [copy] Copying 3 files to /home/pengchy/soft/intermine/locustmine/dbmodel/build/model
+
+-do-build-db:
+ [build-db] [main] INFO com.zaxxer.hikari.HikariDataSource - HikariCP pool db.production is starting.
+ [build-db] [main] INFO com.zaxxer.hikari.pool.HikariPool - HikariCP pool db.production is shutting down.
+ [build-db] java.lang.RuntimeException: Failed to initialise db.production
+ [build-db] 	at org.intermine.sql.DatabaseFactory.getDatabase(DatabaseFactory.java:58)
+ [build-db] 	at org.intermine.task.BuildDbTask.setOsName(BuildDbTask.java:63)
+ [build-db] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+ [build-db] 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+ [build-db] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+ [build-db] 	at java.lang.reflect.Method.invoke(Method.java:498)
+ [build-db] 	at org.apache.tools.ant.IntrospectionHelper$AttributeSetter.setObject(IntrospectionHelper.java:1508)
+ [build-db] 	at org.apache.tools.ant.IntrospectionHelper.setAttribute(IntrospectionHelper.java:412)
+ [build-db] 	at org.apache.tools.ant.RuntimeConfigurable.maybeConfigure(RuntimeConfigurable.java:531)
+ [build-db] 	at org.apache.tools.ant.RuntimeConfigurable.maybeConfigure(RuntimeConfigurable.java:467)
+ [build-db] 	at org.apache.tools.ant.Task.maybeConfigure(Task.java:202)
+ [build-db] 	at org.apache.tools.ant.UnknownElement.configure(UnknownElement.java:200)
+ [build-db] 	at org.apache.tools.ant.UnknownElement.maybeConfigure(UnknownElement.java:164)
+ [build-db] 	at org.apache.tools.ant.Task.perform(Task.java:347)
+ [build-db] 	at org.apache.tools.ant.taskdefs.Sequential.execute(Sequential.java:67)
+ [build-db] 	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:293)
+ [build-db] 	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+ [build-db] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+ [build-db] 	at java.lang.reflect.Method.invoke(Method.java:498)
+ [build-db] 	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+ [build-db] 	at org.apache.tools.ant.Task.perform(Task.java:348)
+ [build-db] 	at org.apache.tools.ant.taskdefs.MacroInstance.execute(MacroInstance.java:402)
+ [build-db] 	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:293)
+ [build-db] 	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+ [build-db] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+ [build-db] 	at java.lang.reflect.Method.invoke(Method.java:498)
+ [build-db] 	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+ [build-db] 	at org.apache.tools.ant.Task.perform(Task.java:348)
+ [build-db] 	at org.apache.tools.ant.Target.execute(Target.java:437)
+ [build-db] 	at org.apache.tools.ant.Target.performTasks(Target.java:458)
+ [build-db] 	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1405)
+ [build-db] 	at org.apache.tools.ant.Project.executeTarget(Project.java:1376)
+ [build-db] 	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+ [build-db] 	at org.apache.tools.ant.Project.executeTargets(Project.java:1260)
+ [build-db] 	at org.apache.tools.ant.Main.runBuild(Main.java:857)
+ [build-db] 	at org.apache.tools.ant.Main.startAnt(Main.java:236)
+ [build-db] 	at org.apache.tools.ant.launch.Launcher.run(Launcher.java:286)
+ [build-db] 	at org.apache.tools.ant.launch.Launcher.main(Launcher.java:112)
+ [build-db] Caused by: com.zaxxer.hikari.pool.PoolInitializationException: Exception during pool initialization
+ [build-db] 	at com.zaxxer.hikari.pool.BaseHikariPool.initializeConnections(BaseHikariPool.java:544)
+ [build-db] 	at com.zaxxer.hikari.pool.BaseHikariPool.<init>(BaseHikariPool.java:171)
+ [build-db] 	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:60)
+ [build-db] 	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:48)
+ [build-db] 	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:80)
+ [build-db] 	at org.intermine.sql.Database.<init>(Database.java:122)
+ [build-db] 	at org.intermine.sql.DatabaseFactory.getDatabase(DatabaseFactory.java:56)
+ [build-db] 	... 37 more
+ [build-db] Caused by: org.postgresql.util.PSQLException: FATAL: no pg_hba.conf entry for host "10.4.0.17", user "postgres", database "locustmine", SSL off
+ [build-db] 	at org.postgresql.Driver$ConnectThread.getResult(Driver.java:355)
+ [build-db] 	at org.postgresql.Driver.connect(Driver.java:279)
+ [build-db] 	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+ [build-db] 	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+ [build-db] 	at org.postgresql.ds.common.BaseDataSource.getConnection(BaseDataSource.java:86)
+ [build-db] 	at org.postgresql.ds.common.BaseDataSource.getConnection(BaseDataSource.java:71)
+ [build-db] 	at com.zaxxer.hikari.pool.BaseHikariPool.addConnection(BaseHikariPool.java:438)
+ [build-db] 	at com.zaxxer.hikari.pool.BaseHikariPool.initializeConnections(BaseHikariPool.java:542)
+ [build-db] 	... 43 more

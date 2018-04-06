@@ -1,0 +1,6 @@
+
+BUILD FAILED
+/home/pengchy/soft/intermine/imbuild/objectstore.xml:51: The following error occurred while executing this line:
+/home/pengchy/soft/intermine/imbuild/task.xml:180: Could not access database: db.production
+
+Total time: 13 seconds
