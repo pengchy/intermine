@@ -1,0 +1,116 @@
+<project type="bio">
+  <property name="target.model" value="genomic"/>
+  <property name="source.location" location="/home/pengchy/soft/intermine/bio/sources/"/>
+  <property name="common.os.prefix" value="common"/>
+  <property name="intermine.properties.file" value="testmine.properties"/>
+  <property name="default.intermine.properties.file" location="/home/pengchy/soft/intermine/testmine/default.intermine.integrate.properties"/>
+
+  <sources>
+    <source name="locust-gff" type="gff">
+      <property name="gff3.taxonId" value="7004"/>
+      <property name="gff3.seqDataSourceName" value="LocustGenomeProject"/>
+      <property name="gff3.dataSourceName" value="LocustGenomeProject"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Locust L. migratoria genome"/>
+      <property name="src.data.dir" location="/home/pengchy/Project/LocustMine/testdata/genome/gff"/>
+    </source>
+
+    <source name="locust-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="LocustGenomeProject"/>
+      <property name="fasta.dataSetTitle" value="Locust chromosome sequence"/>
+      <property name="fasta.taxonId" value="7004"/>
+      <property name="fasta.includes" value="Locust.genome.2.4.1.fa"/>
+      <property name="src.data.dir" location="/home/pengchy/Project/LocustMine/testdata/genome/fasta"/>
+    </source>
+
+    <source name="locust-cds-fasta" type="fasta" dump="true">
+      <property name="fasta.className" value="org.intermine.model.bio.CDS"/>
+      <property name="fasta.dataSourceName" value="LocustGenomeProject"/>
+      <property name="fasta.dataSetTitle" value="Locust CDS sequences"/>
+      <property name="fasta.taxonId" value="7004"/>
+      <property name="fasta.includes" value="Locust.V2.4.1.cds"/>
+      <property name="src.data.dir" location="/home/pengchy/Project/LocustMine/testdata/genome/cds"/>
+    </source>
+
+    <source name="locust-protein-fasta" type="fasta" dump="true">
+      <property name="fasta.className" value="org.intermine.model.bio.Protein"/>
+      <property name="fasta.sequenceType" value="protein"/>
+      <property name="fasta.dataSourceName" value="LocustGenomeProject"/>
+      <property name="fasta.dataSetTitle" value="Locust protein sequences"/>
+      <property name="fasta.taxonId" value="7004"/>
+      <property name="fasta.includes" value="Locust.V2.4.1.pep"/>
+      <property name="src.data.dir" location="/home/pengchy/Project/LocustMine/testdata/genome/protein"/>
+    </source>
+
+    <source name="go" type="go" dump="true">
+      <property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/go/go-basic.obo"/>
+			<property name="createrelations" value="false"/>
+    </source>
+
+    <source name="go-annotation" type="go-annotation" dump="true">
+      <property name="ontologyfile" location="/home/pengchy/Project/LocustMine/testdata/go/go-basic.obo"/>
+      <property name="src.data.dir" location="/home/pengchy/Project/LocustMine/testdata/go-annotation/"/>
+    </source>
+
+    <source name="interpro" type="interpro" dump="true">
+      <property name="src.data.dir" location="/home/pengchy/Project/LocustMine/testdata/interpro/"/>
+    </source>
+
+		<source name="protein2ipr" type="protein2ipr" dump="true">
+			<property name="src.data.dir" location="/home/pengchy/Project/LocustMine/testdata/protein2ipr/"/>
+			<property name="src.data.dir.includes" value="Locust.V2.4.1.protein2ipr"/>
+			<property name="protein2ipr.organisms" value="7004"/>
+		</source>
+
+<!--
+    <source name="uniprot-locust" type="uniprot">
+      <property name="uniprot.organisms" value="7004"/>
+      <property name="createinterpro" value="true"/>
+      <property name="creatego" value="true"/>
+      <property name="src.data.dir" location="/home/pengchy/Project/LocustMine/testdata/uniprot/"/>
+    </source>
+		<source name="locust-expression-xml" type="locust-expression-xml">
+		  <property name="src.data.dir" location="/home/pengchy/Project/LocustMine/testdata/locust-expression-xml/"/>
+			<property name="src.data.dir.includes" value="Merged_rpkm.xls.xml"/>
+		</source>
+		
+    <source name="kegg-pathway" type="kegg-pathway">
+			<property name="kegg.organisms" value="7004"/>
+      <property name="src.data.dir" location="/home/pengchy/Project/LocustMine/testdata/kegg/"/>
+    </source>
+-->
+    <source name="update-publications" type="update-publications">
+      <property name="src.data.file" location="/home/pengchy/soft/intermine/testmine/integrate/build/publications.xml"/>
+    </source>
+    <source name="entrez-organism" type="entrez-organism">
+      <property name="src.data.file" location="/home/pengchy/soft/intermine/testmine/integrate/build/organisms.xml"/>
+    </source>
+  </sources>
+
+  <post-processing>
+	  <post-process name="create-chromosome-locations-and-lengths"/>
+    <post-process name="transfer-sequences" dump="true"/>
+    <post-process name="create-references"/>
+		<post-process name="create-location-overlap-index"/>
+		<post-process name="create-overlap-view"/>
+
+		<!--post-process name="create-gene-flanking-features"/-->
+
+    <!-- this runs the postprocessing steps in all sources -->
+    <post-process name="do-sources"/>
+
+		<post-process name="create-attribute-indexes"/>
+    <post-process name="create-search-index"/>
+		<post-process name="populate-child-features"/>
+
+    <post-process name="summarise-objectstore"/>
+    <post-process name="create-autocomplete-index"/>
+  </post-processing>
+
+</project>
+
+<!--
+
+		-->
+

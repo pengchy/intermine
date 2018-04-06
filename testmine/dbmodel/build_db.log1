@@ -1,0 +1,699 @@
+Buildfile: /home/pengchy/soft/intermine/testmine/dbmodel/build.xml
+
+-pre-clean:
+
+-init-project:
+
+-pre-pre-init:
+
+library.-pre-init:
+
+model.-pre-init:
+
+-pre-init:
+
+clean:
+   [delete] Deleting directory /home/pengchy/soft/intermine/testmine/dbmodel/build
+   [delete] Deleting directory /home/pengchy/soft/intermine/testmine/dbmodel/dist
+
+-init-project:
+
+-check-for-intermine-properties-file:
+
+-set-release-suffix-not-exists:
+
+-set-release-suffix-exists:
+
+-set-release-suffix:
+
+-pre-pre-init:
+
+library.-pre-init:
+
+model.-pre-init:
+    [mkdir] Created dir: /home/pengchy/soft/intermine/testmine/dbmodel/build/model
+
+-pre-init:
+    [mkdir] Created dir: /home/pengchy/soft/intermine/testmine/dbmodel/build/classes
+
+-pre-define-task-classpath:
+    [mkdir] Created dir: /home/pengchy/soft/intermine/testmine/dbmodel/build/main
+    [mkdir] Created dir: /home/pengchy/soft/intermine/testmine/dbmodel/build/tmp
+     [copy] Copying 1 file to /home/pengchy/soft/intermine/testmine/dbmodel/build/main
+
+-init-check-for-intermine-properties-dir:
+
+-check-for-intermine-properties-dir:
+
+-init-check-for-intermine-properties:
+
+-check-for-intermine-properties:
+
+-init-properties:
+     [copy] Copying 1 file to /home/pengchy/soft/intermine/testmine/dbmodel/build/main
+     [copy] Copying 1 file to /home/pengchy/soft/intermine/testmine/dbmodel/build/main
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+[dependencies] ---- Dependency build order:-----------------------
+[dependencies]  intermine/model/main
+[dependencies]  intermine/objectstore/main
+[dependencies]  intermine/integrate/model/fulldata
+[dependencies]  intermine/integrate/main
+[dependencies]  intermine/api/model/userprofile
+[dependencies]  intermine/pathquery/main
+[dependencies]  intermine/api/main
+[dependencies]  bio/core/main
+[dependencies] ---------------------------------------------------
+[dependencies] Fri Apr 06 15:26:27 CST 2018
+[dependencies] Executing "jar" for source "intermine/model/main"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/model/main
+
+-init-project:
+
+-pre-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+-init-generate:
+
+-pre-generate:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+[dependencies] Fri Apr 06 15:26:27 CST 2018
+[dependencies] Executing "jar" for source "intermine/objectstore/main"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/objectstore/main
+
+-init-project:
+
+-pre-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+-init-generate:
+
+-pre-generate:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+[dependencies] Fri Apr 06 15:26:27 CST 2018
+[dependencies] Executing "jar" for source "intermine/integrate/model/fulldata"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/integrate/model/fulldata
+
+-init-project:
+
+-pre-pre-init:
+
+library.-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+library.-init-generate:
+
+-pre-define-task-classpath:
+   [delete] Deleting directory /home/pengchy/soft/intermine/intermine/integrate/model/fulldata/build/tmp
+    [mkdir] Created dir: /home/pengchy/soft/intermine/intermine/integrate/model/fulldata/build/tmp
+
+-define-task-classpath:
+
+-check-task-availability:
+
+-load-os-tasks:
+     [echo] Loading objectstore tasks
+
+-load-int-tasks:
+
+-load-web-tasks:
+
+-load-task-taskdefs:
+
+-init-macrodef-build-db:
+
+-init-task-xml:
+
+-init-model-out-of-date:
+
+-init-generate:
+
+-pre-generate:
+
+build-model-from-xml-in-build-dir:
+
+build-model-from-xml-in-project-dir:
+     [echo] Found model file fulldata_model.xml in project directory /home/pengchy/soft/intermine/imbuild/../intermine/integrate/model/fulldata
+
+-generate-model-java-message:
+     [echo] generated model java is up to date - not regenerating
+
+-init-macrodef-model-output:
+
+generate-model-java:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+   [depend] The class org.intermine.model.fulldata.Reference in file /home/pengchy/soft/intermine/intermine/integrate/model/fulldata/build/classes/org/intermine/model/fulldata/Reference.class is out of date due to org.intermine.model.fulldata.Reference but has not been deleted because its source file could not be determined
+   [depend] The class org.intermine.model.fulldata.Item in file /home/pengchy/soft/intermine/intermine/integrate/model/fulldata/build/classes/org/intermine/model/fulldata/Item.class is out of date due to org.intermine.model.fulldata.Reference but has not been deleted because its source file could not be determined
+   [depend] The class org.intermine.model.fulldata.ReferenceList in file /home/pengchy/soft/intermine/intermine/integrate/model/fulldata/build/classes/org/intermine/model/fulldata/ReferenceList.class is out of date due to org.intermine.model.fulldata.ReferenceList but has not been deleted because its source file could not be determined
+   [depend] The class org.intermine.model.fulldata.Attribute in file /home/pengchy/soft/intermine/intermine/integrate/model/fulldata/build/classes/org/intermine/model/fulldata/Attribute.class is out of date due to org.intermine.model.fulldata.Attribute but has not been deleted because its source file could not be determined
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+[dependencies] Fri Apr 06 15:26:27 CST 2018
+[dependencies] Executing "jar" for source "intermine/integrate/main"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/integrate/main
+
+-init-project:
+
+-pre-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+-init-generate:
+
+-pre-generate:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+[dependencies] Fri Apr 06 15:26:28 CST 2018
+[dependencies] Executing "jar" for source "intermine/api/model/userprofile"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/api/model/userprofile
+
+-init-project:
+
+-pre-pre-init:
+
+library.-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+library.-init-generate:
+
+-pre-define-task-classpath:
+   [delete] Deleting directory /home/pengchy/soft/intermine/intermine/api/model/userprofile/build/tmp
+    [mkdir] Created dir: /home/pengchy/soft/intermine/intermine/api/model/userprofile/build/tmp
+
+-define-task-classpath:
+
+-check-task-availability:
+
+-load-os-tasks:
+     [echo] Loading objectstore tasks
+
+-load-int-tasks:
+
+-load-web-tasks:
+
+-load-task-taskdefs:
+
+-init-macrodef-build-db:
+
+-init-task-xml:
+
+-init-model-out-of-date:
+
+-init-generate:
+
+-pre-generate:
+
+build-model-from-xml-in-build-dir:
+
+build-model-from-xml-in-project-dir:
+     [echo] Found model file userprofile_model.xml in project directory /home/pengchy/soft/intermine/imbuild/../intermine/api/model/userprofile
+
+-generate-model-java-message:
+     [echo] generated model java is up to date - not regenerating
+
+-init-macrodef-model-output:
+
+generate-model-java:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+   [depend] The class org.intermine.model.userprofile.PermanentToken in file /home/pengchy/soft/intermine/intermine/api/model/userprofile/build/classes/org/intermine/model/userprofile/PermanentToken.class is out of date due to org.intermine.model.userprofile.PermanentToken but has not been deleted because its source file could not be determined
+   [depend] The class org.intermine.model.userprofile.UserProfile in file /home/pengchy/soft/intermine/intermine/api/model/userprofile/build/classes/org/intermine/model/userprofile/UserProfile.class is out of date due to org.intermine.model.userprofile.PermanentToken but has not been deleted because its source file could not be determined
+   [depend] The class org.intermine.model.userprofile.TemplateSummary in file /home/pengchy/soft/intermine/intermine/api/model/userprofile/build/classes/org/intermine/model/userprofile/TemplateSummary.class is out of date due to org.intermine.model.userprofile.TemplateSummary but has not been deleted because its source file could not be determined
+   [depend] The class org.intermine.model.userprofile.SavedTemplateQuery in file /home/pengchy/soft/intermine/intermine/api/model/userprofile/build/classes/org/intermine/model/userprofile/SavedTemplateQuery.class is out of date due to org.intermine.model.userprofile.TemplateSummary but has not been deleted because its source file could not be determined
+   [depend] The class org.intermine.model.userprofile.SavedBag in file /home/pengchy/soft/intermine/intermine/api/model/userprofile/build/classes/org/intermine/model/userprofile/SavedBag.class is out of date due to org.intermine.model.userprofile.SavedBag but has not been deleted because its source file could not be determined
+   [depend] The class org.intermine.model.userprofile.Tag in file /home/pengchy/soft/intermine/intermine/api/model/userprofile/build/classes/org/intermine/model/userprofile/Tag.class is out of date due to org.intermine.model.userprofile.Tag but has not been deleted because its source file could not be determined
+   [depend] The class org.intermine.model.userprofile.SavedQuery in file /home/pengchy/soft/intermine/intermine/api/model/userprofile/build/classes/org/intermine/model/userprofile/SavedQuery.class is out of date due to org.intermine.model.userprofile.UserProfile but has not been deleted because its source file could not be determined
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+[dependencies] Fri Apr 06 15:26:28 CST 2018
+[dependencies] Executing "jar" for source "intermine/pathquery/main"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/pathquery/main
+
+-init-project:
+
+-pre-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+-init-generate:
+
+-pre-generate:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+[dependencies] Fri Apr 06 15:26:28 CST 2018
+[dependencies] Executing "jar" for source "intermine/api/main"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/api/main
+
+-init-project:
+
+-pre-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+-init-generate:
+
+-pre-generate:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+[dependencies] Fri Apr 06 15:26:28 CST 2018
+[dependencies] Executing "jar" for source "bio/core/main"  in directory: /home/pengchy/soft/intermine/imbuild/../bio/core/main
+
+-init-project:
+
+-pre-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+-init-generate:
+
+-pre-generate:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+
+-define-task-classpath:
+
+-check-task-availability:
+
+-load-os-tasks:
+     [echo] Loading objectstore tasks
+
+-load-int-tasks:
+     [echo] Loading integration tasks
+
+-load-web-tasks:
+
+-load-task-taskdefs:
+
+-init-macrodef-build-db:
+
+-init-task-xml:
+
+-init-build-db:
+
+-define-macrodef-merge-additions:
+
+create-so-model:
+ [so-model] Total terms: 1935
+ [so-model] Total terms, post-pruning: 85
+ [so-model] Total terms, post-flattening: 47
+ [so-model] Wrote /home/pengchy/soft/intermine/testmine/dbmodel/build/model/so_additions.xml
+
+-pre-init-merge:
+
+-init-merge:
+     [copy] Copying 1 file to /home/pengchy/soft/intermine/testmine/dbmodel/build/model
+
+-init-extra-models-start:
+
+-init-extra-models-end:
+
+-merge-models:
+[merge-source-models] merging model additions from: /home/pengchy/soft/intermine/testmine/dbmodel/build/model/so_additions.xml
+[merge-source-models] merging model additions from: /home/pengchy/soft/intermine/bio/core/genomic_additions.xml
+[merge-source-models] merging model additions from: /home/pengchy/soft/intermine/bio/sources/gff/gff_additions.xml
+[merge-source-models] merging model additions from: /home/pengchy/soft/intermine/bio/sources/fasta/fasta_additions.xml
+[merge-source-models] merging model additions from: /home/pengchy/soft/intermine/bio/sources/go/go_additions.xml
+[merge-source-models] merging model additions from: /home/pengchy/soft/intermine/bio/sources/go-annotation/go-annotation_additions.xml
+[merge-source-models] merging model additions from: /home/pengchy/soft/intermine/bio/sources/interpro/interpro_additions.xml
+[merge-source-models] merging model additions from: /home/pengchy/soft/intermine/bio/sources/protein2ipr/protein2ipr_additions.xml
+[merge-source-models] merging model additions from: /home/pengchy/soft/intermine/bio/sources/entrez-organism/entrez-organism_additions.xml
+
+-init-compile:
+
+library.-init-generate:
+    [mkdir] Created dir: /home/pengchy/soft/intermine/testmine/dbmodel/build/gen/src
+
+-init-model-out-of-date:
+
+model.-init-generate:
+
+-init-generate:
+
+-pre-generate-retrieve:
+
+-pre-generate-properties:
+
+-pre-generate:
+
+build-model-from-xml-in-build-dir:
+     [echo] Found model file genomic_model.xml in build directory /home/pengchy/soft/intermine/testmine/dbmodel/build
+     [copy] Copying 1 file to /home/pengchy/soft/intermine/testmine/dbmodel/build/main
+
+build-model-from-xml-in-project-dir:
+
+-generate-model-java-message:
+
+-init-macrodef-model-output:
+
+generate-model-java:
+     [echo] Generating model java code for genomic model to /home/pengchy/soft/intermine/testmine/dbmodel/build/gen/src
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+    [javac] Compiling 148 source files to /home/pengchy/soft/intermine/testmine/dbmodel/build/classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 1.6
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 1 warning
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-pre-build-db:
+     [copy] Copying 3 files to /home/pengchy/soft/intermine/testmine/dbmodel/build/model
+
+-do-build-db:
+ [build-db] [main] INFO com.zaxxer.hikari.HikariDataSource - HikariCP pool db.production is starting.
+ [build-db] Our new url -> jdbc:postgresql://localhost/testmine
+ [build-db] Our new url -> jdbc:postgresql://localhost/testmine
+[create-indexes] [main] INFO com.zaxxer.hikari.HikariDataSource - HikariCP pool db.production is starting.
+[Finalizer] INFO com.zaxxer.hikari.pool.HikariPool - HikariCP pool db.production is shutting down.
+[analyse-db] [main] INFO com.zaxxer.hikari.HikariDataSource - HikariCP pool db.production is starting.
+
+-post-build-db:
+
+build-db:
+
+BUILD SUCCESSFUL
+Total time: 41 seconds
+[Thread-1] INFO com.zaxxer.hikari.pool.HikariPool - HikariCP pool db.production is shutting down.
+[HikariCP connection filler (pool db.production)] INFO com.zaxxer.hikari.util.ConcurrentBag - ConcurrentBag has been closed, ignoring add()
+[Thread-3] INFO com.zaxxer.hikari.pool.HikariPool - HikariCP pool db.production is shutting down.

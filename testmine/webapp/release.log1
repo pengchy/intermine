@@ -1,0 +1,1409 @@
+Buildfile: /home/pengchy/soft/intermine/testmine/webapp/build.xml
+
+-init-project:
+
+library.-pre-pre-init:
+
+-pre-pre-init:
+
+library.-pre-init:
+
+webapp.-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+[dependencies] ---- Dependency build order:-----------------------
+[dependencies]  intermine/model/main
+[dependencies]  intermine/objectstore/main
+[dependencies]  intermine/integrate/model/fulldata
+[dependencies]  intermine/integrate/main
+[dependencies]  intermine/api/model/userprofile
+[dependencies]  intermine/pathquery/main
+[dependencies]  intermine/api/main
+[dependencies]  bio/core/main
+[dependencies]  testmine/dbmodel
+[dependencies]  intermine/web/main
+[dependencies]  intermine/jbrowse-endpoint/main
+[dependencies]  intermine/webapp/main
+[dependencies]  intermine/webtasks/main
+[dependencies]  intermine/webservice/client/main
+[dependencies]  bio/tools/main
+[dependencies]  bio/webapp
+[dependencies] ---------------------------------------------------
+[dependencies] Fri Apr 06 15:35:50 CST 2018
+[dependencies] Executing "jar" for source "intermine/model/main"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/model/main
+
+-init-project:
+
+-pre-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+-init-generate:
+
+-pre-generate:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+[dependencies] Fri Apr 06 15:35:50 CST 2018
+[dependencies] Executing "jar" for source "intermine/objectstore/main"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/objectstore/main
+
+-init-project:
+
+-pre-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+-init-generate:
+
+-pre-generate:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+[dependencies] Fri Apr 06 15:35:51 CST 2018
+[dependencies] Executing "jar" for source "intermine/integrate/model/fulldata"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/integrate/model/fulldata
+
+-init-project:
+
+-pre-pre-init:
+
+library.-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+library.-init-generate:
+
+-pre-define-task-classpath:
+   [delete] Deleting directory /home/pengchy/soft/intermine/intermine/integrate/model/fulldata/build/tmp
+    [mkdir] Created dir: /home/pengchy/soft/intermine/intermine/integrate/model/fulldata/build/tmp
+
+-define-task-classpath:
+
+-check-task-availability:
+
+-load-os-tasks:
+     [echo] Loading objectstore tasks
+
+-load-int-tasks:
+     [echo] Loading integration tasks
+
+-load-web-tasks:
+
+-load-task-taskdefs:
+
+-init-macrodef-build-db:
+
+-init-task-xml:
+
+-init-model-out-of-date:
+
+-init-generate:
+
+-pre-generate:
+
+build-model-from-xml-in-build-dir:
+
+build-model-from-xml-in-project-dir:
+     [echo] Found model file fulldata_model.xml in project directory /home/pengchy/soft/intermine/imbuild/../intermine/integrate/model/fulldata
+
+-generate-model-java-message:
+     [echo] generated model java is up to date - not regenerating
+
+-init-macrodef-model-output:
+
+generate-model-java:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+   [depend] The class org.intermine.model.fulldata.Reference in file /home/pengchy/soft/intermine/intermine/integrate/model/fulldata/build/classes/org/intermine/model/fulldata/Reference.class is out of date due to org.intermine.model.fulldata.Reference but has not been deleted because its source file could not be determined
+   [depend] The class org.intermine.model.fulldata.Item in file /home/pengchy/soft/intermine/intermine/integrate/model/fulldata/build/classes/org/intermine/model/fulldata/Item.class is out of date due to org.intermine.model.fulldata.Reference but has not been deleted because its source file could not be determined
+   [depend] The class org.intermine.model.fulldata.ReferenceList in file /home/pengchy/soft/intermine/intermine/integrate/model/fulldata/build/classes/org/intermine/model/fulldata/ReferenceList.class is out of date due to org.intermine.model.fulldata.ReferenceList but has not been deleted because its source file could not be determined
+   [depend] The class org.intermine.model.fulldata.Attribute in file /home/pengchy/soft/intermine/intermine/integrate/model/fulldata/build/classes/org/intermine/model/fulldata/Attribute.class is out of date due to org.intermine.model.fulldata.Attribute but has not been deleted because its source file could not be determined
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+[dependencies] Fri Apr 06 15:35:51 CST 2018
+[dependencies] Executing "jar" for source "intermine/integrate/main"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/integrate/main
+
+-init-project:
+
+-pre-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+-init-generate:
+
+-pre-generate:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+[dependencies] Fri Apr 06 15:35:51 CST 2018
+[dependencies] Executing "jar" for source "intermine/api/model/userprofile"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/api/model/userprofile
+
+-init-project:
+
+-pre-pre-init:
+
+library.-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+library.-init-generate:
+
+-pre-define-task-classpath:
+   [delete] Deleting directory /home/pengchy/soft/intermine/intermine/api/model/userprofile/build/tmp
+    [mkdir] Created dir: /home/pengchy/soft/intermine/intermine/api/model/userprofile/build/tmp
+
+-define-task-classpath:
+
+-check-task-availability:
+
+-load-os-tasks:
+     [echo] Loading objectstore tasks
+
+-load-int-tasks:
+     [echo] Loading integration tasks
+
+-load-web-tasks:
+
+-load-task-taskdefs:
+
+-init-macrodef-build-db:
+
+-init-task-xml:
+
+-init-model-out-of-date:
+
+-init-generate:
+
+-pre-generate:
+
+build-model-from-xml-in-build-dir:
+
+build-model-from-xml-in-project-dir:
+     [echo] Found model file userprofile_model.xml in project directory /home/pengchy/soft/intermine/imbuild/../intermine/api/model/userprofile
+
+-generate-model-java-message:
+     [echo] generated model java is up to date - not regenerating
+
+-init-macrodef-model-output:
+
+generate-model-java:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+   [depend] The class org.intermine.model.userprofile.PermanentToken in file /home/pengchy/soft/intermine/intermine/api/model/userprofile/build/classes/org/intermine/model/userprofile/PermanentToken.class is out of date due to org.intermine.model.userprofile.PermanentToken but has not been deleted because its source file could not be determined
+   [depend] The class org.intermine.model.userprofile.UserProfile in file /home/pengchy/soft/intermine/intermine/api/model/userprofile/build/classes/org/intermine/model/userprofile/UserProfile.class is out of date due to org.intermine.model.userprofile.PermanentToken but has not been deleted because its source file could not be determined
+   [depend] The class org.intermine.model.userprofile.TemplateSummary in file /home/pengchy/soft/intermine/intermine/api/model/userprofile/build/classes/org/intermine/model/userprofile/TemplateSummary.class is out of date due to org.intermine.model.userprofile.TemplateSummary but has not been deleted because its source file could not be determined
+   [depend] The class org.intermine.model.userprofile.SavedTemplateQuery in file /home/pengchy/soft/intermine/intermine/api/model/userprofile/build/classes/org/intermine/model/userprofile/SavedTemplateQuery.class is out of date due to org.intermine.model.userprofile.TemplateSummary but has not been deleted because its source file could not be determined
+   [depend] The class org.intermine.model.userprofile.SavedBag in file /home/pengchy/soft/intermine/intermine/api/model/userprofile/build/classes/org/intermine/model/userprofile/SavedBag.class is out of date due to org.intermine.model.userprofile.SavedBag but has not been deleted because its source file could not be determined
+   [depend] The class org.intermine.model.userprofile.Tag in file /home/pengchy/soft/intermine/intermine/api/model/userprofile/build/classes/org/intermine/model/userprofile/Tag.class is out of date due to org.intermine.model.userprofile.Tag but has not been deleted because its source file could not be determined
+   [depend] The class org.intermine.model.userprofile.SavedQuery in file /home/pengchy/soft/intermine/intermine/api/model/userprofile/build/classes/org/intermine/model/userprofile/SavedQuery.class is out of date due to org.intermine.model.userprofile.UserProfile but has not been deleted because its source file could not be determined
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+[dependencies] Fri Apr 06 15:35:51 CST 2018
+[dependencies] Executing "jar" for source "intermine/pathquery/main"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/pathquery/main
+
+-init-project:
+
+-pre-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+-init-generate:
+
+-pre-generate:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+[dependencies] Fri Apr 06 15:35:52 CST 2018
+[dependencies] Executing "jar" for source "intermine/api/main"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/api/main
+
+-init-project:
+
+-pre-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+-init-generate:
+
+-pre-generate:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+[dependencies] Fri Apr 06 15:35:52 CST 2018
+[dependencies] Executing "jar" for source "bio/core/main"  in directory: /home/pengchy/soft/intermine/imbuild/../bio/core/main
+
+-init-project:
+
+-pre-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+-init-generate:
+
+-pre-generate:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+[dependencies] Fri Apr 06 15:35:52 CST 2018
+[dependencies] Executing "jar" for source "testmine/dbmodel"  in directory: /home/pengchy/soft/intermine/imbuild/../testmine/dbmodel
+
+-init-project:
+
+-pre-pre-init:
+
+library.-pre-init:
+
+model.-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+library.-init-generate:
+
+-pre-define-task-classpath:
+   [delete] Deleting directory /home/pengchy/soft/intermine/testmine/dbmodel/build/tmp
+    [mkdir] Created dir: /home/pengchy/soft/intermine/testmine/dbmodel/build/tmp
+
+-define-task-classpath:
+
+-check-task-availability:
+
+-load-os-tasks:
+     [echo] Loading objectstore tasks
+
+-load-int-tasks:
+     [echo] Loading integration tasks
+
+-load-web-tasks:
+
+-load-task-taskdefs:
+
+-init-macrodef-build-db:
+
+-init-task-xml:
+
+-init-model-out-of-date:
+
+model.-init-generate:
+
+-init-generate:
+
+-check-for-intermine-properties-file:
+
+-set-release-suffix-not-exists:
+
+-set-release-suffix-exists:
+
+-set-release-suffix:
+
+-init-check-for-intermine-properties-dir:
+
+-check-for-intermine-properties-dir:
+
+-init-check-for-intermine-properties:
+
+-check-for-intermine-properties:
+
+-init-properties:
+     [copy] Copying 1 file to /home/pengchy/soft/intermine/testmine/dbmodel/build/main
+     [copy] Copying 1 file to /home/pengchy/soft/intermine/testmine/dbmodel/build/main
+
+-pre-generate-retrieve:
+     [echo] Retrieving model from os.production...
+[dependencies] [main] INFO com.zaxxer.hikari.HikariDataSource - HikariCP pool db.production is starting.
+[dependencies] Not writing "genomic_keyDefs.properties" as version in database is identical to local copy
+[dependencies] Model in database is identical to local model.
+
+-pre-generate-properties:
+
+-pre-generate:
+
+build-model-from-xml-in-build-dir:
+     [echo] Found model file genomic_model.xml in build directory /home/pengchy/soft/intermine/testmine/dbmodel/build
+
+build-model-from-xml-in-project-dir:
+
+-generate-model-java-message:
+
+-init-macrodef-model-output:
+
+generate-model-java:
+     [echo] Generating model java code for genomic model to /home/pengchy/soft/intermine/testmine/dbmodel/build/gen/src
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+    [javac] Compiling 148 source files to /home/pengchy/soft/intermine/testmine/dbmodel/build/classes
+[dependencies] warning: [options] bootstrap class path not set in conjunction with -source 1.6
+[dependencies] Note: Some input files use unchecked or unsafe operations.
+[dependencies] Note: Recompile with -Xlint:unchecked for details.
+[dependencies] 1 warning
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+  [lib:jar] Building jar: /home/pengchy/soft/intermine/testmine/dbmodel/dist/testmine-dbmodel.jar
+
+-post-jar:
+
+jar:
+[dependencies] Fri Apr 06 15:35:57 CST 2018
+[dependencies] Executing "jar" for source "intermine/web/main"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/web/main
+
+-init-project:
+
+-pre-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+-init-generate:
+
+-pre-generate:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+[dependencies] Fri Apr 06 15:35:58 CST 2018
+[dependencies] Executing "jar" for source "intermine/jbrowse-endpoint/main"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/jbrowse-endpoint/main
+
+-init-project:
+
+-pre-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+-init-generate:
+
+-pre-generate:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+[dependencies] Fri Apr 06 15:35:58 CST 2018
+[dependencies] Executing "jar" for source "intermine/webapp/main"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/webapp/main
+
+-init-project:
+
+library.-pre-pre-init:
+
+-pre-pre-init:
+
+library.-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+-init-generate:
+
+-pre-generate:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-check-project-level:
+
+-pre-jar:
+     [echo] Running webapp pre-jar
+
+-init-presetdef-war:
+
+-init-yui:
+
+-define-minify-task:
+
+-minify:
+     [echo] Minifying javascript and css files
+[yui-compressor] [100%] autocompleter.js [6195] ---> autocompleter-COMPRESSED.js [6195]
+[yui-compressor] [100%] bag.js [316] ---> bag-COMPRESSED.js [316]
+[yui-compressor] [100%] bagUploadConfirm.js [3154] ---> bagUploadConfirm-COMPRESSED.js [3154]
+[yui-compressor] [100%] builder.js [2001] ---> builder-COMPRESSED.js [2001]
+[yui-compressor] [100%] controls.js [17186] ---> controls-COMPRESSED.js [17186]
+[yui-compressor] [100%] date.js [3018] ---> date-COMPRESSED.js [3018]
+[yui-compressor] [100%] dragdealer.js [10007] ---> dragdealer-COMPRESSED.js [10007]
+[yui-compressor] [100%] effects.js [24345] ---> effects-COMPRESSED.js [24345]
+[yui-compressor] [100%] excanvas.js [14372] ---> excanvas-COMPRESSED.js [14372]
+[yui-compressor] [100%] exportoptions.js [1923] ---> exportoptions-COMPRESSED.js [1923]
+[yui-compressor] [100%] historyBagView.js [796] ---> historyBagView-COMPRESSED.js [796]
+[yui-compressor] [100%] im.js [43387] ---> im-COMPRESSED.js [43387]
+[yui-compressor] [100%] imdwr.js [21499] ---> imdwr-COMPRESSED.js [21499]
+[yui-compressor] [100%] import.js [410] ---> import-COMPRESSED.js [410]
+[yui-compressor] [100%] imtables-deps.js [206834] ---> imtables-deps-COMPRESSED.js [206834]
+[yui-compressor] [100%] imtables.js [141254] ---> imtables-COMPRESSED.js [141254]
+[yui-compressor] [100%] imutils.js [6310] ---> imutils-COMPRESSED.js [6310]
+[yui-compressor] [100%] inlineTagEditor.js [3271] ---> inlineTagEditor-COMPRESSED.js [3271]
+[yui-compressor] [100%] inlinetemplate.js [1069] ---> inlinetemplate-COMPRESSED.js [1069]
+[yui-compressor] [100%] intermine.api.js [3527] ---> intermine.api-COMPRESSED.js [3527]
+[yui-compressor] [100%] intermine.js [7463] ---> intermine-COMPRESSED.js [7463]
+[yui-compressor] [100%] jQuery.roundCorners-1.1.1.js [11668] ---> jQuery.roundCorners-1.1.1-COMPRESSED.js [11668]
+[yui-compressor] [100%] jquery-1.7.js [139520] ---> jquery-1.7-COMPRESSED.js [139520]
+[yui-compressor] [100%] jquery-ui-1.10.3.custom.js [256245] ---> jquery-ui-1.10.3.custom-COMPRESSED.js [256245]
+[yui-compressor] [100%] jquery.boxy.js [10414] ---> jquery.boxy-COMPRESSED.js [10414]
+[yui-compressor] [100%] jquery.center.js [957] ---> jquery.center-COMPRESSED.js [957]
+[yui-compressor] [100%] jsphylosvg.js [43322] ---> jsphylosvg-COMPRESSED.js [43322]
+[yui-compressor] [100%] list-listener.js [1348] ---> list-listener-COMPRESSED.js [1348]
+[yui-compressor] [100%] mymine.js [5348] ---> mymine-COMPRESSED.js [5348]
+[yui-compressor] [100%] notifications.js [1618] ---> notifications-COMPRESSED.js [1618]
+[yui-compressor] [100%] other-mines-links.js [1961] ---> other-mines-links-COMPRESSED.js [1961]
+[yui-compressor] [100%] pngfix.js [960] ---> pngfix-COMPRESSED.js [960]
+[yui-compressor] [100%] properties.js [117] ---> properties-COMPRESSED.js [117]
+[yui-compressor] [100%] prototype.js [94035] ---> prototype-COMPRESSED.js [94035]
+[yui-compressor] [100%] queryBuilder.js [4252] ---> queryBuilder-COMPRESSED.js [4252]
+[yui-compressor] [100%] queryBuilderView.js [1392] ---> queryBuilderView-COMPRESSED.js [1392]
+[yui-compressor] [100%] raphael.js [80971] ---> raphael-COMPRESSED.js [80971]
+[yui-compressor] [100%] report.js [4145] ---> report-COMPRESSED.js [4145]
+[yui-compressor] [100%] scriptaculous.js [780] ---> scriptaculous-COMPRESSED.js [780]
+[yui-compressor] [100%] shareBag.js [2119] ---> shareBag-COMPRESSED.js [2119]
+[yui-compressor] [100%] shim.js [18] ---> shim-COMPRESSED.js [18]
+[yui-compressor] [100%] slider.js [7274] ---> slider-COMPRESSED.js [7274]
+[yui-compressor] [100%] table.js [3219] ---> table-COMPRESSED.js [3219]
+[yui-compressor] [100%] tablesort.js [21286] ---> tablesort-COMPRESSED.js [21286]
+[yui-compressor] [100%] tagSelect.js [627] ---> tagSelect-COMPRESSED.js [627]
+[yui-compressor] [100%] templateForm.js [9404] ---> templateForm-COMPRESSED.js [9404]
+[yui-compressor] [100%] textarea-resize.js [1020] ---> textarea-resize-COMPRESSED.js [1020]
+[yui-compressor] [100%] toolbar.js [689] ---> toolbar-COMPRESSED.js [689]
+[yui-compressor] [100%] track.js [3599] ---> track-COMPRESSED.js [3599]
+[yui-compressor] [100%] underscore.js [12066] ---> underscore-COMPRESSED.js [12066]
+[yui-compressor] [JavaScript] Compressed 50 files to 100% (1209KB to 1209KB, saving 0KB)
+[yui-compressor] [CSS] No files to compress, or all files already up to date
+[yui-compressor] Compressed 50 files to 100% (1209KB to 1209KB, saving 0KB)
+
+do-jar:
+     [echo] Running webapp do-jar
+      [war] Building war: /home/pengchy/soft/intermine/intermine/webapp/main/dist/intermine-webapp.war
+
+-post-jar:
+
+jar:
+[dependencies] Fri Apr 06 15:36:00 CST 2018
+[dependencies] Executing "jar" for source "intermine/webtasks/main"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/webtasks/main
+
+-init-project:
+
+-pre-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+-init-generate:
+
+-pre-generate:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+[dependencies] Fri Apr 06 15:36:00 CST 2018
+[dependencies] Executing "jar" for source "intermine/webservice/client/main"  in directory: /home/pengchy/soft/intermine/imbuild/../intermine/webservice/client/main
+
+-init-project:
+
+-pre-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+-init-generate:
+
+-pre-generate:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+[dependencies] Fri Apr 06 15:36:00 CST 2018
+[dependencies] Executing "jar" for source "bio/tools/main"  in directory: /home/pengchy/soft/intermine/imbuild/../bio/tools/main
+
+-init-project:
+
+-pre-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+-init-generate:
+
+-pre-generate:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-pre-jar:
+
+-init-presetdef-jar:
+
+do-jar:
+
+-post-jar:
+
+jar:
+[dependencies] Fri Apr 06 15:36:00 CST 2018
+[dependencies] Executing "jar" for source "bio/webapp"  in directory: /home/pengchy/soft/intermine/imbuild/../bio/webapp
+
+-init-project:
+
+library.-pre-pre-init:
+
+-pre-pre-init:
+
+library.-pre-init:
+
+webapp.-pre-init:
+
+-pre-init:
+
+init:
+
+-pre-init-deps:
+
+-init-deps:
+
+-init-compile:
+
+-init-generate:
+
+-pre-generate:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+
+-check-for-intermine-properties-file:
+
+-set-release-suffix-not-exists:
+
+-set-release-suffix-exists:
+
+-set-release-suffix:
+
+-pre-define-task-classpath:
+   [delete] Deleting directory /home/pengchy/soft/intermine/bio/webapp/build/tmp
+    [mkdir] Created dir: /home/pengchy/soft/intermine/bio/webapp/build/tmp
+
+-init-check-for-intermine-properties-dir:
+
+-check-for-intermine-properties-dir:
+
+-init-check-for-intermine-properties:
+
+-check-for-intermine-properties:
+
+-init-properties:
+
+-check-keystore:
+[Finalizer] INFO com.zaxxer.hikari.pool.HikariPool - HikariCP pool db.production is shutting down.
+
+-inject-keystore:
+
+-final-app-pre-jar:
+
+-check-project-level:
+
+webapp.-pre-jar:
+     [echo] Running webapp pre-jar
+
+application.-pre-jar:
+     [copy] Copying 1 file to /home/pengchy/soft/intermine/bio/webapp/dist
+
+-add-struts-config:
+    [unwar] Expanding: /home/pengchy/soft/intermine/bio/webapp/dist/bio-webapp.war into /home/pengchy/soft/intermine/bio/webapp/build/webapp
+      [war] Updating war: /home/pengchy/soft/intermine/bio/webapp/dist/bio-webapp.war
+
+-pre-jar:
+
+-init-presetdef-war:
+
+-define-task-classpath:
+
+-check-task-availability:
+
+-load-os-tasks:
+     [echo] Loading objectstore tasks
+
+-load-int-tasks:
+     [echo] Loading integration tasks
+
+-load-web-tasks:
+     [echo] Loading web tasks
+
+-load-task-taskdefs:
+
+-init-macrodef-build-db:
+
+-init-task-xml:
+
+-init-summarise-objectstore:
+
+retrieve-objectstore-summary:
+
+do-jar:
+      [war] Updating war: /home/pengchy/soft/intermine/bio/webapp/dist/bio-webapp.war
+
+-post-jar:
+
+jar:
+
+-init-compile:
+    [mkdir] Created dir: /home/pengchy/soft/intermine/testmine/webapp/build/classes
+
+-init-generate:
+
+-pre-generate:
+
+do-generate:
+
+-post-generate:
+
+generate:
+
+-pre-compile:
+
+-init-macrodef-javac:
+
+do-compile-with-gen-src:
+
+do-compile-without-gen-src:
+
+do-compile:
+
+-post-compile:
+
+compile:
+
+-init-jar:
+    [mkdir] Created dir: /home/pengchy/soft/intermine/testmine/webapp/dist
+
+-check-for-intermine-properties-file:
+
+-set-release-suffix-not-exists:
+
+-set-release-suffix-exists:
+
+-set-release-suffix:
+
+-pre-define-task-classpath:
+    [mkdir] Created dir: /home/pengchy/soft/intermine/testmine/webapp/build/main
+    [mkdir] Created dir: /home/pengchy/soft/intermine/testmine/webapp/build/tmp
+     [copy] Copying 1 file to /home/pengchy/soft/intermine/testmine/webapp/build/main
+
+-init-check-for-intermine-properties-dir:
+
+-check-for-intermine-properties-dir:
+
+-init-check-for-intermine-properties:
+
+-check-for-intermine-properties:
+
+-init-properties:
+     [copy] Copying 1 file to /home/pengchy/soft/intermine/testmine/webapp/build/main
+     [copy] Copying 1 file to /home/pengchy/soft/intermine/testmine/webapp/build/main
+
+-check-keystore:
+
+-inject-keystore:
+
+-final-app-pre-jar:
+     [copy] Copying 1 file to /home/pengchy/soft/intermine/testmine/webapp/build/webapp/WEB-INF/classes
+     [copy] Copying 1 file to /home/pengchy/soft/intermine/testmine/webapp/build/webapp/WEB-INF/classes
+
+-check-project-level:
+
+webapp.-pre-jar:
+     [echo] Running webapp pre-jar
+    [mkdir] Created dir: /home/pengchy/soft/intermine/testmine/webapp/build/webapp/WEB-INF/lib
+     [copy] Copying 11 files to /home/pengchy/soft/intermine/testmine/webapp/build/webapp
+     [copy] Copying 1 file to /home/pengchy/soft/intermine/testmine/webapp/build/webapp/WEB-INF/lib
+
+application.-pre-jar:
+     [copy] Copying 1 file to /home/pengchy/soft/intermine/testmine/webapp/dist
+
+-add-struts-config:
+    [unwar] Expanding: /home/pengchy/soft/intermine/testmine/webapp/dist/testmine-webapp.war into /home/pengchy/soft/intermine/testmine/webapp/build/webapp
+
+-pre-jar:
+
+-init-presetdef-war:
+
+-define-task-classpath:
+
+-check-task-availability:
+
+-load-os-tasks:
+     [echo] Loading objectstore tasks
+
+-load-int-tasks:
+     [echo] Loading integration tasks
+
+-load-web-tasks:
+     [echo] Loading web tasks
+
+-load-task-taskdefs:
+
+-init-macrodef-build-db:
+
+-init-task-xml:
+
+-init-summarise-objectstore:
+
+retrieve-objectstore-summary:
+[summarise-objectstore] [main] INFO com.zaxxer.hikari.HikariDataSource - HikariCP pool db.production is starting.
+
+do-jar:
+      [war] Updating war: /home/pengchy/soft/intermine/testmine/webapp/dist/testmine-webapp.war
+
+-post-jar:
+
+jar:
+
+-init-action:
+
+-pre-action:
+
+do-action:
+
+-post-action:
+
+action:
+
+default:
+
+-init-project:
+
+-check-for-intermine-properties-file:
+
+-set-release-suffix-not-exists:
+
+-set-release-suffix-exists:
+
+-set-release-suffix:
+
+library.-pre-pre-init:
+
+-pre-pre-init:
+
+library.-pre-init:
+
+webapp.-pre-init:
+
+-pre-init:
+
+-pre-define-task-classpath:
+   [delete] Deleting directory /home/pengchy/soft/intermine/testmine/webapp/build/tmp
+    [mkdir] Created dir: /home/pengchy/soft/intermine/testmine/webapp/build/tmp
+
+-init-check-for-intermine-properties-dir:
+
+-check-for-intermine-properties-dir:
+
+-init-check-for-intermine-properties:
+
+-check-for-intermine-properties:
+
+-init-properties:
+     [copy] Copying 1 file to /home/pengchy/soft/intermine/testmine/webapp/build/main
+     [copy] Copying 1 file to /home/pengchy/soft/intermine/testmine/webapp/build/main
+
+init:
+
+-set-deploy-url:
+[determine-tomcat-version] Setting deploy url -tomcat-manager-url = http://159.226.67.243:8080/manager/text
+[determine-tomcat-version] Setting deploy url -tomcat-manager-url = http://159.226.67.243:8080/manager/text
+[determine-tomcat-version] Setting deploy url -tomcat-manager-url = http://159.226.67.243:8080/manager/text
+[determine-tomcat-version] Setting deploy url -tomcat-manager-url = http://159.226.67.243:8080/manager/text
+[determine-tomcat-version] Setting deploy url -tomcat-manager-url = http://159.226.67.243:8080/manager/text
+[determine-tomcat-version] Setting deploy url -tomcat-manager-url = http://159.226.67.243:8080/manager/text
+[determine-tomcat-version] Setting deploy url -tomcat-manager-url = http://159.226.67.243:8080/manager/text
+[determine-tomcat-version] Setting deploy url -tomcat-manager-url = http://159.226.67.243:8080/manager/text
+[determine-tomcat-version] Setting deploy url -tomcat-manager-url = http://159.226.67.243:8080/manager/text
+
+remove-webapp:
+[tomcat-undeploy] OK - Undeployed application at context path /testmine
+
+-init-project:
+
+-check-for-intermine-properties-file:
+
+-set-release-suffix-not-exists:
+
+-set-release-suffix-exists:
+
+-set-release-suffix:
+
+library.-pre-pre-init:
+
+-pre-pre-init:
+
+library.-pre-init:
+
+webapp.-pre-init:
+
+-pre-init:
+
+-pre-define-task-classpath:
+   [delete] Deleting directory /home/pengchy/soft/intermine/testmine/webapp/build/tmp
+    [mkdir] Created dir: /home/pengchy/soft/intermine/testmine/webapp/build/tmp
+
+-init-check-for-intermine-properties-dir:
+
+-check-for-intermine-properties-dir:
+
+-init-check-for-intermine-properties:
+
+-check-for-intermine-properties:
+
+-init-properties:
+     [copy] Copying 1 file to /home/pengchy/soft/intermine/testmine/webapp/build/main
+     [copy] Copying 1 file to /home/pengchy/soft/intermine/testmine/webapp/build/main
+
+init:
+
+-set-deploy-url:
+[determine-tomcat-version] Setting deploy url -tomcat-manager-url = http://159.226.67.243:8080/manager/text
+[determine-tomcat-version] Setting deploy url -tomcat-manager-url = http://159.226.67.243:8080/manager/text
+[determine-tomcat-version] Setting deploy url -tomcat-manager-url = http://159.226.67.243:8080/manager/text
+[determine-tomcat-version] Setting deploy url -tomcat-manager-url = http://159.226.67.243:8080/manager/text
+[determine-tomcat-version] Setting deploy url -tomcat-manager-url = http://159.226.67.243:8080/manager/text
+[determine-tomcat-version] Setting deploy url -tomcat-manager-url = http://159.226.67.243:8080/manager/text
+[determine-tomcat-version] Setting deploy url -tomcat-manager-url = http://159.226.67.243:8080/manager/text
+[determine-tomcat-version] Setting deploy url -tomcat-manager-url = http://159.226.67.243:8080/manager/text
+
+release-webapp:
+[tomcat-deploy] OK - Deployed application at context path /testmine
+
+BUILD SUCCESSFUL
+Total time: 1 minute 55 seconds
+[Thread-104] INFO com.zaxxer.hikari.pool.HikariPool - HikariCP pool db.production is shutting down.
