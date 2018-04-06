@@ -1,7 +1,0 @@
-<project name="locustmine-postprocess" default="default" basedir=".">
-
-  <description>perform post processing for locustmine</description>
-
-  <import file="../../imbuild/postprocess.xml"/>
-
-</project>
