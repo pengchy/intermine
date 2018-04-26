@@ -174,8 +174,8 @@ public class HeatMapController extends TilesAction
         String expressionScoreJSON = null;
 
         // Key: gene symbol or PID - Value: list of ExpressionScore objs
-        Map<String, List<ExpressionScore>> expressionScoreMap =
-            new LinkedHashMap<String, List<ExpressionScore>>();
+        Map<String, List<ExpressionResults>> expressionScoreMap =
+            new LinkedHashMap<String, List<ExpressionResults>>();
 
         PathQuery query = new PathQuery(model);
         query = queryExpressionScore(bag, conditionType, query);
@@ -207,17 +207,17 @@ public class HeatMapController extends TilesAction
 
             if (!expressionScoreMap.containsKey(symbol)) {
                 // Create a list with space for n (size of conditions) ExpressionScore
-                List<ExpressionScore> expressionScoreList = new ArrayList<ExpressionScore>(
+                List<ExpressionResults> expressionScoreList = new ArrayList<ExpressionResults>(
                         Collections.nCopies(conditions.size(),
-                                new ExpressionScore()));
-                ExpressionScore aScore = new ExpressionScore(condition,
+                                new ExpressionResults()));
+                ExpressionResults aScore = new ExpressionResults(condition,
                         score, id, symbol);
 
                 expressionScoreList.set(conditions.indexOf(condition), aScore);
                 expressionScoreMap.put(symbol, expressionScoreList);
 
             } else {
-                ExpressionScore aScore = new ExpressionScore(
+                ExpressionResults aScore = new ExpressionResults(
                         condition, score, id, symbol);
                 expressionScoreMap
                 .get(symbol).set(conditions.indexOf(condition), aScore);
@@ -230,4 +230,110 @@ public class HeatMapController extends TilesAction
         return expressionScoreJSON;
 
     }
+    
+    private PathQuery queryExpressionScore(InterMineBag bag, String conditionType,
+            PathQuery query) {
+
+        String bagType = bag.getType();
+        String type = bagType.toLowerCase();
+
+        // Add views
+        query.addViews(
+                bagType + "ExpressionScore." + type + ".primaryIdentifier",
+                bagType + "ExpressionScore." + type + ".symbol",
+                bagType + "ExpressionScore.score",
+                bagType + "ExpressionScore." + conditionType + ".name"
+//                ,bagType + "ExpressionScore.submission.DCCid"
+        );
+
+        // Add orderby
+        query.addOrderBy(bagType + "ExpressionScore." + type
+                + ".primaryIdentifier", OrderDirection.ASC);
+
+        // Add constraints and you can edit the constraint values below
+        query.addConstraint(Constraints.in(bagType + "ExpressionScore." + type,
+                bag.getName()));
+
+        return query;
+    }
+    
+    /**
+     * Parse expressionScoreMap to JSON string
+     *
+     * @param conditionType CellLine or DevelopmentalStage
+     * @param geneExpressionScoreMap
+     * @return json string
+     */
+    private String parseToJSON(String conditionType,
+            Map<String, List<ExpressionResults>> expressionScoreMap) {
+
+        // if no scores returns an empty JSON string
+        if (expressionScoreMap.size() == 0) {
+            return "{}";
+        }
+
+        // vars - conditions
+        // smps - genes/exons
+        List<String> vars =  new ArrayList<String>();
+        if ("Tissue".equals(conditionType)) {
+            vars = EXPRESSION_CONDITION_LIST_TISSUE;
+        } else if ("DevelopmentalStage".equals(conditionType)) {
+            vars = EXPRESSION_CONDITION_LIST_DEVELOPMENTALSTAGE;
+        } else if("PhaseTransition".equals(conditionType)){
+						vars = EXPRESSION_CONDITION_LIST_PHASETRANSITION;
+				} else {
+            String msg = "Wrong argument: " + conditionType
+                    + ". Should be 'CellLine' or 'DevelopmentalStage'";
+            throw new RuntimeException(msg);
+        }
+
+        Map<String, Object> heatmapData = new LinkedHashMap<String, Object>();
+        Map<String, Object> yInHeatmapData =  new LinkedHashMap<String, Object>();
+
+        List<String> smps =  new ArrayList<String>(expressionScoreMap.keySet());
+
+        List<String> desc =  new ArrayList<String>();
+        desc.add("Intensity");
+
+        //        List<ArrayList<Double>> data =  new ArrayList<ArrayList<Double>>();
+
+        //      for (String seqenceFeature : expressionScoreMap.keySet()) {
+        //      ArrayList<Double> dataLine = new ArrayList<Double>();
+        //      for (ExpressionScore es : expressionScoreMap.get(seqenceFeature)) {
+        //          dataLine.add(es.getLogScore());
+        //      }
+        //      data.add(dataLine);
+        //  }
+        double[][] data = new double[smps.size()][vars.size()];
+
+        for (int i = 0; i < smps.size(); i++) {
+            String seqenceFeature = smps.get(i);
+            for (int j = 0; j < vars.size(); j++) {
+                data[i][j] = expressionScoreMap.get(seqenceFeature).get(j).getLogScore();
+            }
+        }
+
+        // Rotate data
+        double[][] rotatedData = new double[vars.size()][smps.size()];
+
+        int ii = 0;
+        for (int i = 0; i < vars.size(); i++) {
+            int jj = 0;
+            for (int j = 0; j < smps.size(); j++) {
+                rotatedData[ii][jj] = data[j][i];
+                jj++;
+            }
+            ii++;
+        }
+
+        yInHeatmapData.put("vars", vars);
+        yInHeatmapData.put("smps", smps);
+        yInHeatmapData.put("desc", desc);
+        yInHeatmapData.put("data", rotatedData);
+        heatmapData.put("y", yInHeatmapData);
+        JSONObject jo = new JSONObject(heatmapData);
+
+        return jo.toString();
+    }
+    
 }
