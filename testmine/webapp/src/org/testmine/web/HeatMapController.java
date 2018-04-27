@@ -239,19 +239,19 @@ public class HeatMapController extends TilesAction
 
         // Add views
         query.addViews(
-                bagType + "ExpressionScore." + type + ".primaryIdentifier",
-                bagType + "ExpressionScore." + type + ".symbol",
-                bagType + "ExpressionScore.score",
-                bagType + "ExpressionScore." + conditionType + ".name"
+                bagType + "ExpressionResult." + type + ".primaryIdentifier",
+                bagType + "ExpressionResult." + type + ".symbol",
+                bagType + "ExpressionResult.expressionScore",
+                bagType + "ExpressionResult." + conditionType + ".name"
 //                ,bagType + "ExpressionScore.submission.DCCid"
         );
 
         // Add orderby
-        query.addOrderBy(bagType + "ExpressionScore." + type
+        query.addOrderBy(bagType + "ExpressionResult." + type
                 + ".primaryIdentifier", OrderDirection.ASC);
 
         // Add constraints and you can edit the constraint values below
-        query.addConstraint(Constraints.in(bagType + "ExpressionScore." + type,
+        query.addConstraint(Constraints.in(bagType + "ExpressionResult." + type,
                 bag.getName()));
 
         return query;

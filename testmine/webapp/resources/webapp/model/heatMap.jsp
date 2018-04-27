@@ -198,7 +198,7 @@
                         var featureId = o.y.smps;
                         var condition = o.y.vars;
                         if ("${ExpressionType}" == "gene") {
-                            var query = '<query name="" model="genomic" view="RNASeqResult.expressionScore RNASeqResult.sample.primaryIdentifier RNASeqResult.gene.primaryIdentifier RNASeqResult.gene.symbol RNASeqResult.organism.shortName" sortOrder="RNASeqResult.expressionScore asc" constraintLogic="A and B"><constraint path="RNASeqResult.gene" code="B" op="LOOKUP" value="' + featureId + '" extraValue=""/><constraint path="RNASeqResult.developmentalStage" code="A" op="LOOKUP" value="' + condition + '"/></query>';
+                            var query = '<query name="" model="genomic" view="RNASeqResult.expressionScore RNASeqResult.sample.primaryIdentifier RNASeqResult.gene.primaryIdentifier RNASeqResult.gene.symbol RNASeqResult.organism.shortName" sortOrder="RNASeqResult.expressionScore asc" constraintLogic="A and B"><constraint path="RNASeqResult.gene" code="B" op="LOOKUP" value="' + featureId + '" extraValue=""/><constraint path="RNASeqResult.sample" code="A" op="LOOKUP" value="' + condition + '"/></query>';
                             var encodedQuery = encodeURIComponent(query);
                             encodedQuery = encodedQuery.replace("%20", "+");
                             window.open("/${WEB_PROPERTIES['webapp.path']}/loadQuery.do?skipBuilder=true&query=" + encodedQuery + "%0A++++++++++++&trail=|query&method=xml");
@@ -242,7 +242,7 @@
                         var featureId = o.y.smps;
                         var condition = o.y.vars;
                         if ("${ExpressionType}" == "gene") {
-                            var query = '<query name="" model="genomic" view="RNASeqResult.expressionScore RNASeqResult.sample.primaryIdentifier RNASeqResult.gene.primaryIdentifier RNASeqResult.gene.symbol RNASeqResult.organism.shortName" sortOrder="RNASeqResult.expressionScore asc" constraintLogic="A and B"><constraint path="RNASeqResult.gene" code="B" op="LOOKUP" value="' + featureId + '" extraValue=""/><constraint path="RNASeqResult.tissue" code="A" op="LOOKUP" value="' + condition + '"/></query>';
+                            var query = '<query name="" model="genomic" view="RNASeqResult.expressionScore RNASeqResult.sample.primaryIdentifier RNASeqResult.gene.primaryIdentifier RNASeqResult.gene.symbol RNASeqResult.organism.shortName" sortOrder="RNASeqResult.expressionScore asc" constraintLogic="A and B"><constraint path="RNASeqResult.gene" code="B" op="LOOKUP" value="' + featureId + '" extraValue=""/><constraint path="RNASeqResult.sample" code="A" op="LOOKUP" value="' + condition + '"/></query>';
                             var encodedQuery = encodeURIComponent(query);
                             encodedQuery = encodedQuery.replace("%20", "+");
                             window.open("/${WEB_PROPERTIES['webapp.path']}/loadQuery.do?skipBuilder=true&query=" + encodedQuery + "%0A++++++++++++&trail=|query&method=xml");
@@ -293,7 +293,7 @@
                         var featureId = o.y.smps;
                         var condition = o.y.vars;
                         if ("${ExpressionType}" == "gene") {
-                            var query = '<query name="" model="genomic" view="RNASeqResult.expressionScore RNASeqResult.sample.primaryIdentifier RNASeqResult.gene.primaryIdentifier RNASeqResult.gene.symbol RNASeqResult.organism.shortName" sortOrder="RNASeqResult.expressionScore asc" constraintLogic="A and B"><constraint path="RNASeqResult.gene" code="B" op="LOOKUP" value="' + featureId + '" extraValue=""/><constraint path="RNASeqResult.tissue" code="A" op="LOOKUP" value="' + condition + '"/></query>';
+                            var query = '<query name="" model="genomic" view="RNASeqResult.expressionScore RNASeqResult.sample.primaryIdentifier RNASeqResult.gene.primaryIdentifier RNASeqResult.gene.symbol RNASeqResult.organism.shortName" sortOrder="RNASeqResult.expressionScore asc" constraintLogic="A and B"><constraint path="RNASeqResult.gene" code="B" op="LOOKUP" value="' + featureId + '" extraValue=""/><constraint path="RNASeqResult.sample" code="A" op="LOOKUP" value="' + condition + '"/></query>';
                             var encodedQuery = encodeURIComponent(query);
                             encodedQuery = encodedQuery.replace("%20", "+");
                             window.open("/${WEB_PROPERTIES['webapp.path']}/loadQuery.do?skipBuilder=true&query=" + encodedQuery + "%0A++++++++++++&trail=|query&method=xml");
