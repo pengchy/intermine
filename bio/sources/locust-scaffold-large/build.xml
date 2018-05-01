@@ -1,0 +1,5 @@
+<project name="locust-scaffold-large" default="default" basedir=".">
+  <description>build, test, package locust-scaffold-large</description>
+  
+  <import file="../../../imbuild/source.xml"/>
+</project>

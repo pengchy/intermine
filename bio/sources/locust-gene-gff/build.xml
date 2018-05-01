@@ -1,0 +1,5 @@
+<project name="locust-gene-gff" default="default" basedir=".">
+  <description>build, test, package locust-gene-gff</description>
+  
+  <import file="../../../imbuild/source.xml"/>
+</project>

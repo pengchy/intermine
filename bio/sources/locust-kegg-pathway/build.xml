@@ -1,0 +1,5 @@
+<project name="locust-kegg-pathway" default="default" basedir=".">
+  <description>build, test, package locust-kegg-pathway</description>
+  
+  <import file="../../../imbuild/source.xml"/>
+</project>

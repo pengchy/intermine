@@ -1,0 +1,5 @@
+<project name="locust-gsets-gmt" default="default" basedir=".">
+  <description>build, test, package locust-gsets-gmt</description>
+  
+  <import file="../../../imbuild/source.xml"/>
+</project>
