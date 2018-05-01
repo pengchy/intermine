@@ -48,6 +48,10 @@ import org.testmine.web.TestMineUtil;
 public class HeatMapController extends TilesAction
 {
 
+	public static void main(String[] args) {
+		System.out.println("I am at HeatMapController!");
+	}
+
     protected static final Logger LOG = Logger.getLogger(HeatMapController.class);
 // TO be visualised in the Tissues heatmap
     private static final String[] EXPRESSION_ORDERED_CONDITION_TISSUE = {
