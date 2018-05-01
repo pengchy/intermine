@@ -31,14 +31,14 @@
       <property name="src.data.dir" location="/home/pengchy/Project/LocustMine/testdata/go-annotation/"/>
     </source>
 
-		<source name="locust-protein" type="locust-protein" >
+		<source name="locust-protein" type="locust-protein">
 			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/genome/protein/Locust.pep.xml"/>
 		</source>
 
 		<source name="locust-protein2ipr" type="locust-protein2ipr">
 			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/protein2ipr/Locust.V2.4.1.protein2ipr.xml"/>
 		</source>
-    <source name="locust-kegg-pathway" type="locust-kegg-pathway" dump="true">
+    <source name="locust-kegg-pathway" type="locust-kegg-pathway">
 			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/kegg/lmi_gene_map.tab.xml"/>
     </source>
 
@@ -58,6 +58,10 @@
     <source name="update-publications" type="update-publications" dump="true">
       <property name="src.data.file" location="/home/pengchy/soft/intermine/testmine/integrate/build/publications.xml"/>
     </source>
+
+		<source name="locust-gsets-gmt" type="locust-gsets-gmt" dump="true">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/lists/list.xml"/>
+		</source>
 
   </sources>
 

@@ -250,6 +250,12 @@
                      placement="summary"
                      types="SequenceFeature"/>
 
+		<reportdisplayer javaClass="org.intermine.bio.web.displayer.JBrowseDisplayer"
+		                 jspName="model/jbrowseDisplayer.jsp"
+										 replacesFields=""
+										 placement="Genomics"
+										 types="SequenceFeature"/>
+
 	<!--
     <reportdisplayer javaClass="org.intermine.bio.web.displayer.UniProtCommentsDisplayer"
                      jspName="model/uniProtCommentsDisplayer.jsp"
@@ -328,5 +334,18 @@
 								 views="symbol, organism.name, pathways.identifier, pathways.name"
 								 externalLink="http://www.genome.jp/kegg-bin/show_pathway?map=map"/>
 
+	<enrichmentwidgetdisplayer id="geneSets_enrichment"
+                 title="Gene Sets Enrichment"
+								 description="Gene Sets enriched for genes in this list - data from manually collected gene sets"
+								 label="Gene Sets"
+								 startClass="Gene"
+								 startClassDisplay="primaryIdentifier"
+								 enrich="geneSets.name"
+								 enrichIdentifier="geneSets.identifier"
+								 constraints="organism.taxonId=[list], primaryIdentifier != null"
+								 typeClass="Gene"
+								 views="symbol, organism.name, geneSets.identifier, geneSets.name"/>
+
 </widgets>
 </webconfig>
+
