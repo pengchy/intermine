@@ -133,7 +133,7 @@
 
                     <c:if test="${WEB_PROPERTIES['genomicRegionSearch.enableStrandSpecificSearch']}">
                         <li id="genomicRegionStrandSpecific">
-                            <html:checkbox property="strandSpecific" value="true" />
+                            <html:checkbox property="strandSpecific" value="false" />
                             <span>Check this box to perform a strand-specific region search (search <b>+</b> strand if region start&lt;end; search <b>&ndash;</b> strand if region end&lt;start)</span>
                         </li>
                     </c:if>

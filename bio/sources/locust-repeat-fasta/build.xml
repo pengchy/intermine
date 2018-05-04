@@ -1,0 +1,5 @@
+<project name="locust-repeat-fasta" default="default" basedir=".">
+  <description>build, test, package locust-repeat-fasta</description>
+  
+  <import file="../../../imbuild/source.xml"/>
+</project>

@@ -18,9 +18,33 @@
 			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/genome/fasta/Locust.genome.2.4.1.fa.xml"/>
     </source>
 
-    <source name="locust-gene-gff" type="locust-gene-gff" dump="true">
+    <source name="locust-gene-gff" type="locust-gene-gff">
 			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/genome/gff/Locust.gff3.xml"/>
 		</source>
+
+    <source name="locust-repeat-gff-denovo" type="locust-repeat-gff">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/genome/repeat/Locust.repeat.Denovo.gff3.xml"/>
+		</source>
+
+    <source name="locust-repeat-gff-proteinmasker" type="locust-repeat-gff">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/genome/repeat/Locust.repeat.Proteinmask.gff3.xml"/>
+		</source>
+
+    <source name="locust-repeat-gff-repeatmasker" type="locust-repeat-gff">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/genome/repeat/Locust.repeat.RepeatMasker.gff3.xml"/>
+		</source>
+
+    <source name="locust-repeat-fasta-denovo" type="locust-repeat-fasta">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/genome/repeat/Locust.repeat.Denovo.fa.xml"/>
+    </source>
+
+    <source name="locust-repeat-fasta-proteinmask" type="locust-repeat-fasta">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/genome/repeat/Locust.repeat.Proteinmask.fa.xml"/>
+    </source>
+
+    <source name="locust-repeat-fasta-repeatmasker" type="locust-repeat-fasta">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/genome/repeat/Locust.repeat.RepeatMasker.fa.xml"/>
+    </source>
 
     <source name="locust-cds" type="locust-cds">
 			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/genome/cds/Locust.V2.4.1.cds.xml"/>
@@ -38,6 +62,7 @@
 		<source name="locust-protein2ipr" type="locust-protein2ipr">
 			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/protein2ipr/Locust.V2.4.1.protein2ipr.xml"/>
 		</source>
+
     <source name="locust-kegg-pathway" type="locust-kegg-pathway">
 			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/kegg/lmi_gene_map.tab.xml"/>
     </source>
@@ -52,16 +77,16 @@
 			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/locust-expression/rpkm_bg_clean.txt.xml"/>
     </source>
 
+		<source name="locust-gsets-gmt" type="locust-gsets-gmt" dump="true">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/lists/list.xml"/>
+		</source>
+
     <source name="entrez-organism" type="entrez-organism">
       <property name="src.data.file" location="/home/pengchy/soft/intermine/testmine/integrate/build/organisms.xml"/>
     </source>
     <source name="update-publications" type="update-publications" dump="true">
       <property name="src.data.file" location="/home/pengchy/soft/intermine/testmine/integrate/build/publications.xml"/>
     </source>
-
-		<source name="locust-gsets-gmt" type="locust-gsets-gmt" dump="true">
-			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/lists/list.xml"/>
-		</source>
 
   </sources>
 

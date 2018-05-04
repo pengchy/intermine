@@ -31,6 +31,7 @@ import org.apache.struts.tiles.ComponentContext;
 import org.apache.struts.tiles.actions.TilesAction;
 import org.intermine.api.InterMineAPI;
 import org.intermine.api.profile.InterMineBag;
+import org.intermine.api.profile.BagValue;
 import org.intermine.api.profile.Profile;
 import org.intermine.api.query.PathQueryExecutor;
 import org.intermine.api.results.ExportResultsIterator;
@@ -48,14 +49,10 @@ import org.testmine.web.TestMineUtil;
 public class HeatMapController extends TilesAction
 {
 
-	public static void main(String[] args) {
-		System.out.println("I am at HeatMapController!");
-	}
-
     protected static final Logger LOG = Logger.getLogger(HeatMapController.class);
 // TO be visualised in the Tissues heatmap
     private static final String[] EXPRESSION_ORDERED_CONDITION_TISSUE = {
-        "body_S","Hemocyte_G","Hemocyte_S","Brain_G","Brain_S","Ganglia_G","Ganglia_S",
+        "Fat body_G","Fat body_S","Hemocyte_G","Hemocyte_S","Brain_G","Brain_S","Ganglia_G","Ganglia_S",
         "Antenna4_G","Antenna4_S","AntennaA_G","AntennaA_S","Wing_G","Wing_S","Pronotum_G",
         "Pronotum_S"};
 
@@ -83,6 +80,7 @@ public class HeatMapController extends TilesAction
 
     private static final String GENE = "gene";
 
+
         /**
      * {@inheritDoc}
      */
@@ -98,7 +96,21 @@ public class HeatMapController extends TilesAction
         ObjectStore os = im.getObjectStore();
         InterMineBag bag = (InterMineBag) request.getAttribute("bag");
 
+
+				List<BagValue> bagValues = bag.getContents();
+				//System.out.println("bagValues: " + bagValues.toString());
+				System.out.println("Number of genes is: " + bag.getContents().size());
+				/*
+				for(BagValue bag1 : bagValues){
+					System.out.println("bagValue is: " + bag1.getValue());
+				}
+				*/
+
+
         Model model = im.getModel();
+
+				//System.out.println("Model name: " + model.getName()); 
+				//System.out.println("Model string: " + model.toString());
 
         Profile profile = SessionMethods.getProfile(session);
         PathQueryExecutor executor = im.getPathQueryExecutor(profile);
@@ -120,6 +132,8 @@ public class HeatMapController extends TilesAction
         DecimalFormat df = new DecimalFormat("#.##");
 
         String expressionType = bag.getType().toLowerCase();
+				System.out.println("expressionType: " + expressionType);
+				System.out.println("bag Name: " + bag.getName());
 
         // get the 2 JSON strings
         String expressionScoreJSONTissue =
@@ -147,6 +161,9 @@ public class HeatMapController extends TilesAction
                 Math.log(TestMineUtil.getMinGeneExpressionScore(os) + 1) / Math.log(2);
             logExpressionScoreMax =
                 Math.log(TestMineUtil.getMaxGeneExpressionScore(os) + 1) / Math.log(2);
+						//System.out.println("logExpressionScoreMin: " + logExpressionScoreMin);
+					//	System.out.println("logExpressionScoreMax: " +  logExpressionScoreMax);
+						//System.out.println("bag size: " +  bag.getSize());
         }
 
         request.setAttribute("minExpressionScore", df.format(logExpressionScoreMin));
@@ -170,6 +187,19 @@ public class HeatMapController extends TilesAction
         return null;
     }
 
+		private String getDataSet(String conditionType) {
+			if(conditionType.equalsIgnoreCase(TISSUE)) {
+				return "Tissues";
+			}
+			if(conditionType.equalsIgnoreCase(DEVSTAGE)){
+				return "Development stages";
+			}
+			if(conditionType.equalsIgnoreCase(PHASETRAN)){
+				return "Phase transition";
+			}
+			return null;
+		}
+
 
     private String getJSONString (Model model,
             InterMineBag bag, PathQueryExecutor executor,
@@ -182,7 +212,8 @@ public class HeatMapController extends TilesAction
             new LinkedHashMap<String, List<ExpressionResults>>();
 
         PathQuery query = new PathQuery(model);
-        query = queryExpressionScore(bag, conditionType, query);
+				String dataSet = getDataSet(conditionType);
+        query = queryExpressionScore(bag, dataSet, query);
 
         ExportResultsIterator result;
         try {
@@ -193,6 +224,7 @@ public class HeatMapController extends TilesAction
         LOG.debug("GGS QUERY: -->" + query + "<--");
 
         List<String> conditions = getConditionsList(conditionType);
+				System.out.println(conditionType + " Samples: " + conditions);
 
         while (result.hasNext()) {
             List<ResultElement> row = result.next();
@@ -201,6 +233,12 @@ public class HeatMapController extends TilesAction
             String symbol = (String) row.get(1).getField();
             Double score = (Double) row.get(2).getField();
             String condition = (String) row.get(3).getField();
+						if(!conditions.contains(condition)){
+							System.out.println(condition + " is not in dataset " + conditionType);
+							continue;
+						}
+
+
 //            String dCCid = (String) row.get(4).getField();
 
             if (symbol == null) {
@@ -209,7 +247,7 @@ public class HeatMapController extends TilesAction
 // should be fine with release 4.2 of canvasxpress
 //            symbol = fixSymbol(symbol);
 
-            if (!expressionScoreMap.containsKey(symbol)) {
+            if (!expressionScoreMap.containsKey(id)) {
                 // Create a list with space for n (size of conditions) ExpressionScore
                 List<ExpressionResults> expressionScoreList = new ArrayList<ExpressionResults>(
                         Collections.nCopies(conditions.size(),
@@ -218,24 +256,28 @@ public class HeatMapController extends TilesAction
                         score, id, symbol);
 
                 expressionScoreList.set(conditions.indexOf(condition), aScore);
-                expressionScoreMap.put(symbol, expressionScoreList);
+                expressionScoreMap.put(id, expressionScoreList);
 
             } else {
                 ExpressionResults aScore = new ExpressionResults(
                         condition, score, id, symbol);
                 expressionScoreMap
-                .get(symbol).set(conditions.indexOf(condition), aScore);
+                .get(id).set(conditions.indexOf(condition), aScore);
             }
         }
 
+				System.out.println("DataSets: " + conditionType);
+				System.out.println("Size of the expression: " + expressionScoreMap.size());
+
         expressionScoreJSON = parseToJSON(StringUtils.capitalize(conditionType),
                 expressionScoreMap);
+				System.out.println("Data set " + dataSet + " expressionScoreJSON: " + expressionScoreJSON);
 
         return expressionScoreJSON;
 
     }
     
-    private PathQuery queryExpressionScore(InterMineBag bag, String conditionType,
+    private PathQuery queryExpressionScore(InterMineBag bag, String dataSet,
             PathQuery query) {
 
         String bagType = bag.getType();
@@ -243,20 +285,23 @@ public class HeatMapController extends TilesAction
 
         // Add views
         query.addViews(
-                bagType + "ExpressionResult." + type + ".primaryIdentifier",
-                bagType + "ExpressionResult." + type + ".symbol",
-                bagType + "ExpressionResult.expressionScore",
-                bagType + "ExpressionResult." + conditionType + ".name"
+                "RNASeqResult." + type + ".primaryIdentifier",
+                "RNASeqResult." + type + ".symbol",
+                "RNASeqResult.expressionScore",
+                "RNASeqResult.sample.primaryIdentifier"
 //                ,bagType + "ExpressionScore.submission.DCCid"
         );
 
         // Add orderby
-        query.addOrderBy(bagType + "ExpressionResult." + type
+        query.addOrderBy("RNASeqResult." + type
                 + ".primaryIdentifier", OrderDirection.ASC);
 
+
         // Add constraints and you can edit the constraint values below
-        query.addConstraint(Constraints.in(bagType + "ExpressionResult." + type,
+        query.addConstraint(Constraints.in("RNASeqResult." + type,
                 bag.getName()));
+
+				query.addConstraint(Constraints.equalsExactly("RNASeqResult.sample.dataSets.name",dataSet));
 
         return query;
     }
@@ -279,15 +324,15 @@ public class HeatMapController extends TilesAction
         // vars - conditions
         // smps - genes/exons
         List<String> vars =  new ArrayList<String>();
-        if ("Tissue".equals(conditionType)) {
+        if ("Tissue".equalsIgnoreCase(conditionType)) {
             vars = EXPRESSION_CONDITION_LIST_TISSUE;
-        } else if ("DevelopmentalStage".equals(conditionType)) {
+        } else if ("DevelopmentalStage".equalsIgnoreCase(conditionType)) {
             vars = EXPRESSION_CONDITION_LIST_DEVELOPMENTALSTAGE;
-        } else if("PhaseTransition".equals(conditionType)){
+        } else if("PhaseTransition".equalsIgnoreCase(conditionType)){
 						vars = EXPRESSION_CONDITION_LIST_PHASETRANSITION;
 				} else {
             String msg = "Wrong argument: " + conditionType
-                    + ". Should be 'CellLine' or 'DevelopmentalStage'";
+                    + ". Should be 'Tissue' or 'DevelopmentalStage' or 'PhaseTransition'";
             throw new RuntimeException(msg);
         }
 

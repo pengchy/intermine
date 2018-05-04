@@ -2,9 +2,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@ page import="java.net.URLEncoder" language="java" %>
-<script type="text/javascript">
-	document.writeln("I am here");
-</script>
 
 <!-- heatMap.jsp -->
 
@@ -50,7 +47,7 @@
         <h2>
             <c:choose>
                 <c:when test="${ExpressionType == 'gene'}">
-                    ${WEB_PROPERTIES['heatmap.geneExpressionScoreTitle']}
+                    ${WEB_PROPERTIES['heatmap.expressionScoreTitle']}
                 </c:when>
                 <c:otherwise>
                     ${ExpressionType}
@@ -61,8 +58,6 @@
         <p>
             <i>
                 ${WEB_PROPERTIES['heatmap.expressionScoreSummary']}
-                <a href="/${WEB_PROPERTIES['webapp.path']}/experiment.do?experiment=Locust developmental stages, tissues and phase transition process"> the Celniker group</a>
-                and are log2 of the actual value.
                 <br>Heatmap visualization powered by
                 <a href="http://www.canvasxpress.org">canvasXpress</a>, learn more about the <a href="http://www.canvasxpress.org/heatmap.html">display options</a>.
             </i>
@@ -90,7 +85,7 @@
                     <tr>
                         <td>
                             <div style="padding: 0px 0px 5px 30px;">
-                                <span>Developmental Stage Clustering - Hierarchical:</span>
+                                <span>Developmental Stages Clustering - Hierarchical:</span>
                                 <select id="ds-hc">
                                     <option value="single" selected="selected">Single</option>
                                     <option value="complete">Complete</option>
@@ -105,7 +100,7 @@
                         </td>
                         <td>
                             <div style="padding: 0px 0px 5px 30px;">
-                                <span>Cell Line Clustering - Hierarchical:</span>
+                                <span>Tissues Clustering - Hierarchical:</span>
                                 <select id="ts-hc">
                                     <option value="single" selected="selected">Single</option>
                                     <option value="complete">Complete</option>
@@ -116,11 +111,14 @@
                                     <option value="3" selected="selected">3</option>
                                 </select>
                             </div>
-                            <canvas id="canvas_ts" width="525" height="550"></canvas>
+                            <canvas id="canvas_ts" width="600" height="550"></canvas>
                         </td>
+                    </tr>
+
+										<tr>
                         <td>
                             <div style="padding: 0px 0px 5px 30px;">
-                                <span>Cell Line Clustering - Hierarchical:</span>
+                                <span>Phase transition process Clustering - Hierarchical:</span>
                                 <select id="pt-hc">
                                     <option value="single" selected="selected">Single</option>
                                     <option value="complete">Complete</option>
@@ -131,9 +129,10 @@
                                     <option value="3" selected="selected">3</option>
                                 </select>
                             </div>
-                            <canvas id="canvas_pt" width="525" height="550"></canvas>
+                            <canvas id="canvas_pt" width="700" height="550"></canvas>
                         </td>
-                    </tr>
+
+										</tr>
                 </table>
             </div>
             <div id="description_div">
@@ -148,7 +147,7 @@
                 <i>
                     <c:choose>
                         <c:when test="${ExpressionType == 'gene'}">
-                            ${WEB_PROPERTIES['heatmap.geneExpressionScoreDescription']}
+                            ${WEB_PROPERTIES['heatmap.expressionScoreDescription']}
                         </c:when>
                         <c:otherwise>
                             ${ExpressionType}
@@ -165,7 +164,7 @@
     var feature_count = parseInt(${FeatureCount});
     var max_cluster = parseInt(${MAX_CLUSTER});
     var max_map = parseInt(${MAX_MAP});
-    if ('${fn:length(expressionScoreJSONDevelopmentalStages)}' < 10) {
+    if ('${fn:length(expressionScoreJSONDevelopmentalStage)}' < 10) {
         jQuery('#heatmap_div').remove();
         jQuery('#expression_div').html('<i>Expression scores are not available</i>');
     } else {
@@ -280,7 +279,7 @@
 //            hm_cl.draw();
 
         var hm_pt = new CanvasXpress('canvas_pt',
-    ${expressionScoreJSONTissue},
+    ${expressionScoreJSONPhaseTransition},
                 {graphType: 'Heatmap',
                     title:  'Phase transition',
                     // heatmapType: 'yellow-purple',
