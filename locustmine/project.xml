@@ -2,28 +2,28 @@
   <property name="target.model" value="genomic"/>
   <property name="source.location" location="/home/pengchy/soft/intermine/bio/sources/"/>
   <property name="common.os.prefix" value="common"/>
-  <property name="intermine.properties.file" value="locustminebeta.properties"/>
-  <property name="default.intermine.properties.file" location="/home/pengchy/soft/intermine/locustminebeta/default.intermine.integrate.properties"/>
+  <property name="intermine.properties.file" value="locustmineinter.properties"/>
+  <property name="default.intermine.properties.file" location="/home/pengchy/soft/intermine/locustmineinter/default.intermine.integrate.properties"/>
 
   <sources>
     <source name="go" type="go">
       <property name="src.data.file" location="/home/pengchy/Project/LocustMine/go/go-basic.obo"/>
 			<property name="createrelations" value="false"/>
     </source>
-    <source name="interpro" type="interpro" dump="true">
+    <source name="interpro" type="interpro">
       <property name="src.data.dir" location="/home/pengchy/Project/LocustMine/interpro/"/>
     </source>
 
-    <source name="locust-scaffold" type="locust-scaffold">
+    <source name="locust-scaffold" type="locust-scaffold" dump="true">
 			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/genome/fasta/Locust.genome.2.4.1.fa.xml"/>
     </source>
 
     <source name="locust-gene-gff" type="locust-gene-gff">
 			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/genome/gff/Locust.gff3.xml"/>
 		</source>
-
-    <source name="locust-repeat-gff-denovo" type="locust-repeat-gff" dump="true">
-			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/genome/repeat/Locust.repeat.Denovo.gff3.xml"/>
+<!--
+    <source name="locust-repeat-gff-denovo-0" type="locust-repeat-gff" dump="true">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/genome/repeat/Locust.repeat.Denovo.gff3.xml.0"/>
 		</source>
 
     <source name="locust-repeat-gff-denovo-1" type="locust-repeat-gff">
@@ -38,7 +38,7 @@
 			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/genome/repeat/Locust.repeat.Denovo.gff3.xml.3"/>
 		</source>
 
-    <source name="locust-repeat-gff-denovo-4" type="locust-repeat-gff">
+    <source name="locust-repeat-gff-denovo-4" type="locust-repeat-gff" dump="true">
 			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/genome/repeat/Locust.repeat.Denovo.gff3.xml.4"/>
 		</source>
 
@@ -46,7 +46,7 @@
 			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/genome/repeat/Locust.repeat.Denovo.gff3.xml.5"/>
 		</source>
 
-    <source name="locust-repeat-gff-denovo-6" type="locust-repeat-gff">
+    <source name="locust-repeat-gff-denovo-6" type="locust-repeat-gff" dump="true">
 			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/genome/repeat/Locust.repeat.Denovo.gff3.xml.6"/>
 		</source>
 
@@ -54,7 +54,7 @@
 			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/genome/repeat/Locust.repeat.Denovo.gff3.xml.7"/>
 		</source>
 
-    <source name="locust-repeat-gff-denovo-8" type="locust-repeat-gff">
+    <source name="locust-repeat-gff-denovo-8" type="locust-repeat-gff" dump="true">
 			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/genome/repeat/Locust.repeat.Denovo.gff3.xml.8"/>
 		</source>
 
@@ -66,7 +66,6 @@
 			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/genome/repeat/Locust.repeat.RepeatMasker.gff3.xml"/>
 		</source>
 
-		<!--
     <source name="locust-repeat-fasta-denovo" type="locust-repeat-fasta">
 			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/genome/repeat/Locust.repeat.Denovo.fa.xml"/>
     </source>
@@ -110,10 +109,6 @@
     <source name="locust-gene-expression-bg" type="locust-gene-expression">
 			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/locust-expression/rpkm_bg_clean.txt.xml"/>
     </source>
-
-		<source name="locust-gsets-gmt" type="locust-gsets-gmt" dump="true">
-			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/lists/list.xml"/>
-		</source>
 
 		<source name="locust-orthodb-og" type="locust-orthodb-og">
 			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/Ortholog/lmi_to_orthodb_OG.tb.xml"/>
@@ -178,28 +173,34 @@
 		<source name="locust-network-coexpr-tiss" type="locust-network" dump="true">
 			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/Network/tiss.coexpr.net.tb.xml"/>
 		</source>
+
+		<!--
+		<source name="locust-gsets-gmt" type="locust-gsets-gmt" dump="true">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/lists/list.xml"/>
+		</source>
+
+		<source name="locust-anatomy-expression-median" type="locust-anatomy-expression">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/locust-expression/rpkm.expr.median.txt.xml"/>
+		</source>
 		
-		<source name="locust-function-unknown" type="locust-function-unknown">
-			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/genome/annoUnknown/AnnoUnknown.tb.xml"/>
+		<source name="locust-monarch-phenotype" type="locust-monarch">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/Monarch/gene_phenotype.all.orth.tb.xml"/>
 		</source>
 		
 		<source name="locust-monarch-disease" type="locust-monarch">
 			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/Monarch/gene_disease.all.orth.tb.xml"/>
 		</source>
 		
-		<source name="locust-monarch-phenotype" type="locust-monarch">
-			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/Monarch/gene_phenotype.all.orth.tb.xml"/>
+		<source name="locust-function-unknown" type="locust-function-unknown">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/genome/annoUnknown/AnnoUnknown.tb.xml"/>
 		</source>
-
-		<source name="locust-anatomy-expression-median" type="locust-anatomy-expression">
-			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/locust-expression/rpkm.expr.median.txt.xml"/>
-		</source>
+		-->
 
     <source name="entrez-organism" type="entrez-organism">
-      <property name="src.data.file" location="/home/pengchy/soft/intermine/locustminebeta/integrate/build/organisms.xml"/>
+      <property name="src.data.file" location="/home/pengchy/soft/intermine/locustmine/integrate/build/organisms.xml"/>
     </source>
     <source name="update-publications" type="update-publications" dump="true">
-      <property name="src.data.file" location="/home/pengchy/soft/intermine/locustminebeta/integrate/build/publications.xml"/>
+      <property name="src.data.file" location="/home/pengchy/soft/intermine/locustmine/integrate/build/publications.xml"/>
     </source>
 
   </sources>

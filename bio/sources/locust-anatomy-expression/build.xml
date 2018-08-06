@@ -1,0 +1,5 @@
+<project name="locust-anatomy-expression" default="default" basedir=".">
+  <description>build, test, package locust-anatomy-expression</description>
+  
+  <import file="../../../imbuild/source.xml"/>
+</project>

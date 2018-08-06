@@ -10,7 +10,7 @@
       <property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/go/go-basic.obo"/>
 			<property name="createrelations" value="false"/>
     </source>
-    <source name="interpro" type="interpro" dump="true">
+    <source name="interpro" type="interpro">
       <property name="src.data.dir" location="/home/pengchy/Project/LocustMine/testdata/interpro/"/>
     </source>
 
@@ -22,6 +22,7 @@
 			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/genome/gff/Locust.gff3.xml"/>
 		</source>
 
+		<!--
     <source name="locust-repeat-gff-denovo" type="locust-repeat-gff">
 			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/genome/repeat/Locust.repeat.Denovo.gff3.xml"/>
 		</source>
@@ -45,6 +46,7 @@
     <source name="locust-repeat-fasta-repeatmasker" type="locust-repeat-fasta">
 			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/genome/repeat/Locust.repeat.RepeatMasker.fa.xml"/>
     </source>
+		-->
 
     <source name="locust-cds" type="locust-cds">
 			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/genome/cds/Locust.V2.4.1.cds.xml"/>
@@ -81,10 +83,91 @@
 			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/lists/list.xml"/>
 		</source>
 
+		<source name="locust-orthodb-og" type="locust-orthodb-og">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/Ortholog/lmi_to_orthodb_OG.tb.xml"/>
+		</source>
+
+		<source name="locust-homolog-rat" type="locust-homolog">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/Ortholog/table.Rat.pep-lmi.pep.xml"/>
+		</source>
+
+		<source name="locust-homolog-caeel" type="locust-homolog">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/Ortholog/table.caeel.fa-lmi.pep.xml"/>
+		</source>
+
+		<source name="locust-homolog-drome" type="locust-homolog">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/Ortholog/table.drome.fa-lmi.pep.xml"/>
+		</source>
+
+		<source name="locust-homolog-human" type="locust-homolog">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/Ortholog/table.human.fa-lmi.pep.xml"/>
+		</source>
+
+		<source name="locust-homolog-mouse" type="locust-homolog">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/Ortholog/table.mouse.pep-lmi.pep.xml"/>
+		</source>
+
+		<source name="locust-homolog-zebrafish" type="locust-homolog">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/Ortholog/table.zebrafish.pep-lmi.pep.xml"/>
+		</source>
+
+		<source name="locust-homolog-yeast" type="locust-homolog">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/Ortholog/table.yeast.fa-lmi.pep.xml"/>
+		</source>
+
+		<source name="locust-homolog-tca" type="locust-homolog">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/Ortholog/table.tca.pep-lmi.pep.xml"/>
+		</source>
+
+		<source name="locust-homolog-aga" type="locust-homolog">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/Ortholog/table.aga.pep-lmi.pep.xml"/>
+		</source>
+
+		<source name="locust-network-ppi" type="locust-network">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/Network/ppi.list.merge.xml"/>
+		</source>
+
+		<source name="locust-network-TF-target" type="locust-network">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/Network/TF_Target_Ensembl.txt.xml"/>
+		</source>
+
+		<source name="locust-network-coexpr-brain" type="locust-network">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/Network/brain.coexpr.net.tb.xml"/>
+		</source>
+
+		<source name="locust-network-coexpr-ganglia" type="locust-network">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/Network/ganglia.coexpr.net.tb.xml"/>
+		</source>
+
+		<source name="locust-network-coexpr-dev" type="locust-network">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/Network/dev.coexpr.net.tb.xml"/>
+		</source>
+
+		<source name="locust-network-coexpr-tiss" type="locust-network" dump="true">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/Network/tiss.coexpr.net.tb.xml"/>
+		</source>
+
+		<source name="locust-function-unknown" type="locust-function-unknown">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/genome/annoUnknown/AnnoUnknown.tb.xml"/>
+		</source>
+
+		<source name="locust-monarch-phenotype" type="locust-monarch">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/Monarch/gene_phenotype.all.orth.tb.xml"/>
+		</source>
+
+		<source name="locust-monarch-disease" type="locust-monarch">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/Monarch/gene_disease.all.orth.tb.xml"/>
+		</source>
+
+		<source name="locust-anatomy-expression-median" type="locust-anatomy-expression">
+			<property name="src.data.file" location="/home/pengchy/Project/LocustMine/testdata/locust-expression/rpkm.expr.median.txt.xml"/>
+		</source>
+		
     <source name="entrez-organism" type="entrez-organism">
       <property name="src.data.file" location="/home/pengchy/soft/intermine/testmine/integrate/build/organisms.xml"/>
     </source>
-    <source name="update-publications" type="update-publications" dump="true">
+
+    <source name="update-publications" type="update-publications">
       <property name="src.data.file" location="/home/pengchy/soft/intermine/testmine/integrate/build/publications.xml"/>
     </source>
 
@@ -92,7 +175,7 @@
 
   <post-processing>
 	  <post-process name="create-chromosome-locations-and-lengths"/>
-    <post-process name="transfer-sequences"/>
+    <!--post-process name="transfer-sequences"/-->
     <post-process name="create-references"/>
 		<post-process name="create-location-overlap-index"/>
 		<post-process name="create-overlap-view"/>
@@ -107,7 +190,7 @@
 		<post-process name="populate-child-features"/>
 
     <post-process name="summarise-objectstore"/>
-    <post-process name="create-autocomplete-index" dump="true"/>
+    <post-process name="create-autocomplete-index"/>
   </post-processing>
 
 </project>

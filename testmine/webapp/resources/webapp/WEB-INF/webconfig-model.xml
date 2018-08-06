@@ -87,6 +87,21 @@
     </fields>
   </class>
 
+	<class className="org.intermine.model.bio.Interaction">
+		<fields>
+			<fieldconfig fieldExpr="participant1.primaryIdentifier" />
+			<fieldconfig fieldExpr="participant2.primaryIdentifier" />
+		</fields>
+	</class>
+
+	<class className="org.intermine.model.bio.InteractionDetail">
+		<fields>
+			<fieldconfig fieldExpr="type"/>
+			<fieldconfig fieldExpr="name"/>
+			<fieldconfig fieldExpr="confidence"/>
+		</fields>
+	</class>
+
   <class className="org.intermine.model.bio.Ontology">
     <fields>
       <fieldconfig fieldExpr="name"/>
@@ -98,7 +113,7 @@
 			<fieldconfig fieldExpr="subject.primaryIdentifier"/>
 			<fieldconfig fieldExpr="ontologyTerm.identifier"/>
 			<fieldconfig fieldExpr="ontologyTerm.name"/>
-			<fieldconfig fieldExpr="ontologyTerm.namespace"/>
+			<fieldconfig fieldExpr="ontologyTerm.ontology.name"/>
 		</fields>
 	</class>
 
@@ -228,18 +243,84 @@
 		</fields>
 	</class>
 
+	<class className="org.intermine.model.bio.OrthGroup">
+		<fields>
+			<fieldconfig fieldExpr="identifier"/>
+			<fieldconfig fieldExpr="url"/>
+		</fields>
+	</class>
+
+	<class className="org.intermine.model.bio.Homologue">
+		<fields>
+			<fieldconfig fieldExpr="gene.primaryIdentifier" showInResults="true" showInInlineCollection="false" />
+			<fieldconfig fieldExpr="homologue.primaryIdentifier"/>
+			<fieldconfig fieldExpr="homologue.organism.shortName"/>
+		</fields>
+	</class>
+
+	<class className="org.intermine.model.bio.FunctionOfAssociatedGene">
+		<fields>
+			<fieldconfig fieldExpr="gene.primaryIdentifier" showInResults="true" showInInlineCollection="false" />
+			<fieldconfig fieldExpr="FunctionDB"/>
+			<fieldconfig fieldExpr="identifier"/>
+			<fieldconfig fieldExpr="name"/>
+			<fieldconfig fieldExpr="geneInFunctionSet"/>
+			<fieldconfig fieldExpr="geneInFunctionDB"/>
+			<fieldconfig fieldExpr="geneAssociated"/>
+		</fields>
+	</class>
+
+
+	<class className="org.intermine.model.bio.OrthologueDisease">
+		<fields>
+			<fieldconfig fieldExpr="gene.primaryIdentifier" showInResults="true"/>
+			<fieldconfig fieldExpr="homologue.primaryIdentifier" label="Homologue DB Identifier"/>
+			<fieldconfig fieldExpr="homologue.organism.shortName" label="Homologue organism"/>
+			<fieldconfig fieldExpr="monarchDiseaseTerms.identifier" label="MonarchDiseaseTerm ID"/>
+			<fieldconfig fieldExpr="monarchDiseaseTerms.name" label="MonarchDiseaseTerm name"/>
+		</fields>
+	</class>
+
+	<class className="org.intermine.model.bio.OrthologuePhenotype">
+		<fields>
+			<fieldconfig fieldExpr="gene.primaryIdentifier"/>
+			<fieldconfig fieldExpr="homologue.primaryIdentifier" label="Homologue DB Identifier"/>
+			<fieldconfig fieldExpr="homologue.organism.shortName" label="Homologue organism"/>
+			<fieldconfig fieldExpr="monarchPhenotypeTerms.identifier" label="MonarchPhenotypeTerm ID"/>
+			<fieldconfig fieldExpr="monarchPhenotypeTerms.name" label="MonarchPhenotypeTerm name"/>
+		</fields>
+	</class>
+
+	<class className="org.intermine.model.bio.AnatomyExpression">
+		<fields>
+			<fieldconfig fieldExpr="gene.primaryIdentifier"/>
+			<fieldconfig fieldExpr="anatomyTerm.identifier" label="Anatomy Term" />
+			<fieldconfig fieldExpr="expressionRPKMMin"/>
+			<fieldconfig fieldExpr="expressionRPKM1stQu"/>
+			<fieldconfig fieldExpr="expressionRPKMMedian"/>
+			<fieldconfig fieldExpr="expressionRPKMMean"/>
+			<fieldconfig fieldExpr="expressionRPKM3rdQu"/>
+			<fieldconfig fieldExpr="expressionRPKMMax"/>
+			<fieldconfig fieldExpr="expressionRankMin"/>
+			<fieldconfig fieldExpr="expressionRank1stQu"/>
+			<fieldconfig fieldExpr="expressionRankMedian"/>
+			<fieldconfig fieldExpr="expressionRankMean"/>
+			<fieldconfig fieldExpr="expressionRank3rdQu"/>
+			<fieldconfig fieldExpr="expressionRankMax"/>
+		</fields>
+	</class>
+
 <!-- exporters -->
   <tableExportConfig id="sequence" className="org.intermine.bio.web.export.SequenceHttpExporter"/>
   <tableExportConfig id="gff3" className="org.intermine.bio.web.export.GFF3HttpExporter"/>
   <tableExportConfig id="bed" className="org.intermine.bio.web.export.BEDHttpExporter"/>
 
   <reportdisplayers>
-
-   <reportdisplayer javaClass="org.intermine.bio.web.displayer.GeneOntologyDisplayer"
-                     jspName="model/geneOntologyDisplayer.jsp"
-                     replacesFields="goAnnotation,ontologyAnnotations"
-                     placement="Genomics"
-                     types="Gene"/>
+		<reportdisplayer javaClass="org.intermine.bio.web.displayer.CytoscapeNetworkDisplayer"
+		                 jspName="model/cytoscapeNetworkDisplayer.jsp"
+										 replacesFields="interactions"
+										 placement="Genomics"
+										 types="Gene,Protein"/>
 
     <reportdisplayer javaClass="org.intermine.bio.web.displayer.GeneStructureDisplayer"
                      jspName="model/geneStructureDisplayer.jsp"
@@ -259,7 +340,21 @@
 										 placement="Genomics"
 										 types="SequenceFeature"/>
 
+
+   <reportdisplayer javaClass="org.intermine.bio.web.displayer.GeneOntologyDisplayer"
+                     jspName="model/geneOntologyDisplayer.jsp"
+                     replacesFields="goAnnotation,ontologyAnnotations"
+                     placement="Genomics"
+                     types="Gene"/>
+
 	<!--
+		<reportdisplayer javaClass="org.intermine.bio.web.displayer.HomologueDisplayer"
+		                 jspName="model/homologueDisplayer.jsp"
+										 replacesFields=""
+										 placement="Genomics"
+										 types="Gene,Homologues"/>
+
+										 parameters="{'dataSets': ['Homolog']}"
     <reportdisplayer javaClass="org.intermine.bio.web.displayer.UniProtCommentsDisplayer"
                      jspName="model/uniProtCommentsDisplayer.jsp"
                      replacesFields=""
@@ -310,6 +405,32 @@
 								 externalLink="http://amigo.geneontology.org/cgi-bin/amigo/term_details?term="
 								 correctionCoefficient="org.intermine.bio.web.widget.GeneLenghtCorrectionCoefficient"/>
 	
+	<enrichmentwidgetdisplayer id="monarch_disease_enrichment"
+	               title="Monarch Disease Enrichment"
+								 description="Monarch disease enriched for genes in this list"
+								 label="Disease"
+								 startClass="Gene"
+								 startClassDisplay="primaryIdentifier"
+								 enrich="monarchDiseaseAnnotations.ontologyTerm.name"
+								 enrichIdentifier="monarchDiseaseAnnotations.ontologyTerm.identifier"
+								 constraints="organism.taxonId=[list], primaryIdentifier != null"
+								 typeClass="Gene"
+								 views="monarchDiseaseAnnotations.ontologyTerm.identifier,monarchDiseaseAnnotations.ontologyTerm.name"
+								 externalLink="https://monarchinitiative.org/disease/"/>
+
+	<enrichmentwidgetdisplayer id="monarch_phenotype_enrichment"
+	               title="Monarch Phenotype Enrichment"
+								 description="Monarch phenotype enriched for genes in this list"
+								 label="Disease"
+								 startClass="Gene"
+								 startClassDisplay="primaryIdentifier"
+								 enrich="monarchPhenotypeAnnotations.ontologyTerm.name"
+								 enrichIdentifier="monarchPhenotypeAnnotations.ontologyTerm.identifier"
+								 constraints="organism.taxonId=[list], primaryIdentifier != null"
+								 typeClass="Gene"
+								 views="monarchPhenotypeAnnotations.ontologyTerm.identifier,monarchPhenotypeAnnotations.ontologyTerm.name"
+								 externalLink="https://monarchinitiative.org/phenotype/"/>
+
 	<enrichmentwidgetdisplayer id="prot_dom_enrichment_for_protein"
 	               title="Protein Domain Enrichment"
 								 description="Protein Domains enriched for items in this list."
@@ -348,6 +469,20 @@
 								 constraints="organism.taxonId=[list], primaryIdentifier != null"
 								 typeClass="Gene"
 								 views="symbol, organism.name, geneSets.identifier, geneSets.name"/>
+
+
+
+	<bagtabledisplayer id="orthologues" title="Orthologues" pathStrings="Gene.homologues.homologue.organism"
+	               description="Counts of genes in list with orthologues."
+								 displayFields="name"
+								 exportField="primaryIdentifier"
+								 typeClass="Gene"
+								 columnTitle="Genes"
+								 views="secondaryIdentifier, symbol, organism.shortName,
+								        homologues.homologue.primaryIdentifier,
+												homologues.homologue.symbol,
+												homologues.homologue.organism.shortName,
+												homologues.type"/>
 
 </widgets>
 </webconfig>

@@ -1,0 +1,5 @@
+<project name="locust-orthodb-og" default="default" basedir=".">
+  <description>build, test, package locust-orthodb-og</description>
+  
+  <import file="../../../imbuild/source.xml"/>
+</project>

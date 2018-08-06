@@ -1,0 +1,5 @@
+<project name="locust-function-unknown" default="default" basedir=".">
+  <description>build, test, package locust-function-unknown</description>
+  
+  <import file="../../../imbuild/source.xml"/>
+</project>
