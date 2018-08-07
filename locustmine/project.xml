@@ -2,8 +2,8 @@
   <property name="target.model" value="genomic"/>
   <property name="source.location" location="/home/pengchy/soft/intermine/bio/sources/"/>
   <property name="common.os.prefix" value="common"/>
-  <property name="intermine.properties.file" value="locustmineinter.properties"/>
-  <property name="default.intermine.properties.file" location="/home/pengchy/soft/intermine/locustmineinter/default.intermine.integrate.properties"/>
+  <property name="intermine.properties.file" value="locustmine.properties"/>
+  <property name="default.intermine.properties.file" location="/home/pengchy/soft/intermine/locustmine/default.intermine.integrate.properties"/>
 
   <sources>
     <source name="go" type="go">

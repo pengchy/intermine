@@ -1,0 +1,5 @@
+do{ my $x = {
+       'InterMine-Util-*' => 1,
+       'blib' => 1
+     };
+$x; }
